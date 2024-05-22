@@ -1,0 +1,5 @@
+# Dev notes
+
+## HTML
+
+' = &apos;
