@@ -1,3 +1,5 @@
+import MyButton from "../MyButton";
+
 export default function Showcase() {
   return (
     <section className="py-10 flex flex-col gap-10">
@@ -13,7 +15,7 @@ export default function Showcase() {
               </div>
               <div className="text-shadow">Web Design</div>
             </div>
-            <div>ARROW BTN</div>
+            <MyButton justArrow />
           </div>
         </div>
         <div className="w-1/2">
@@ -27,7 +29,7 @@ export default function Showcase() {
               </div>
               <div className="text-shadow">Landing page Design</div>
             </div>
-            <div>ARROW BTN</div>
+            <MyButton justArrow />
           </div>
         </div>
       </div>
@@ -40,13 +42,11 @@ export default function Showcase() {
             <div className="text-2xl font-semibold">Creative Agency Design</div>
             <div className="text-shadow">Landing page Design</div>
           </div>
-          <div>ARROW BTN</div>
+          <MyButton justArrow />
         </div>
       </div>
       <div className="w-full border border-red-500 flex flex-row justify-center">
-        <div className="text-[#111111] border border-[#757575] rounded-full w-48 h-12 flex justify-center items-center">
-          Let&apos;s See More
-        </div>
+        <MyButton withArrow>Let&apos;s See More</MyButton>
       </div>
     </section>
   );

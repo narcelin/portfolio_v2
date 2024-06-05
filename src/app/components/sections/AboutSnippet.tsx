@@ -1,3 +1,5 @@
+import MyButton from "../MyButton";
+
 export default function AboutSnippet() {
   return (
     <section className="flex flex-row gap-10 py-10">
@@ -20,12 +22,10 @@ export default function AboutSnippet() {
           functionality
         </div>
         <div className="flex flex-row gap-10">
-          <button className="text-[#303030] border border-[#757575] rounded-full w-36 h-12 justify-center items-center">
-            Say Hello
-          </button>
-          <button className="text-[#303030] border border-[#757575] rounded-full w-36 h-12 justify-center items-center">
-            My Portfolio
-          </button>
+          <MyButton fancy withArrow>
+            Let&apos;s Talk
+          </MyButton>
+          <MyButton>Our Services</MyButton>
         </div>
       </div>
     </section>

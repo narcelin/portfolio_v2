@@ -1,14 +1,19 @@
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+
+import MyButton from "../MyButton";
+
 export default function HeroSection() {
   return (
     <section className="flex flex-row gap-10 py-10">
       <div className="w-1/2 flex flex-col gap-10">
         <div className="flex flex-row gap-10">
-          {" "}
-          SOCIAL LINKS
-          <div>IG</div>
-          <div>FB</div>
-          <div>TW</div>
-          <div>LI</div>
+          <FaGithub size={20} />
+          <FaFacebook size={20} />
+          <FaInstagram size={20} />
+          <FaTwitter size={20} />
         </div>
         <h1 className="text-7xl font-semibold">
           👋 Hey there, <br /> It&apos;s Nicolas.
@@ -19,12 +24,10 @@ export default function HeroSection() {
           experiences that are both visually stunning and user-friendly.
         </p>
         <div className="flex flex-row gap-10">
-          <button className="text-[#303030] border border-[#757575] rounded-full w-36 h-12 justify-center items-center">
+          <MyButton fancy withArrow>
             Say Hello
-          </button>
-          <button className="text-[#303030] border border-[#757575] rounded-full w-36 h-12 justify-center items-center">
-            My Portfolio
-          </button>
+          </MyButton>
+          <MyButton>My Portfolio</MyButton>
         </div>
       </div>
       <div className="text-9xl w-1/2 border border-red-500 flex flex-row justify-center items-center">

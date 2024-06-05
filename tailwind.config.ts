@@ -20,7 +20,7 @@ const config: Config = {
         shadow: "#909090"
       },
       backgroundImage: {
-        'my-gradient': 'linear-gradient(145deg, #B86ADF 2.11%,#FF6C63, #FFB147 100%)',
+        'my-gradient': 'linear-gradient(0deg, #B86ADF 2.11%,#FF6C63, #FFB147 100%)',
         'my-gradient90': 'linear-gradient(90deg, #B86ADF 2.11%,#FF6C63, #FFB147 100%)',
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

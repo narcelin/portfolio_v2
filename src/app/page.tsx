@@ -1,7 +1,10 @@
-import NavigationBar from "./components/NavigationBar";
-import HeroSection from "./components/HeroSection";
-import AboutSnippet from "./components/AboutSnippet";
-import Showcase from "./components/Showcase";
+import NavigationBar from "./components/sections/NavigationBar";
+import HeroSection from "./components/sections/HeroSection";
+import AboutSnippet from "./components/sections/AboutSnippet";
+import Showcase from "./components/sections/Showcase";
+import MyOfferings from "./components/sections/MyOfferings";
+import ReachMe from "./components/sections/ReachMe";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
   return (
@@ -10,9 +13,10 @@ export default function Home() {
       <HeroSection />
       <AboutSnippet />
       <Showcase />
+      <MyOfferings />
+      <ReachMe />
+      <Footer />
       <div className="border border-green-500 pt-24">
-        <div>QUICK BIO</div>
-        <div>Latest Works</div>
         <div>My offerings to you</div>
         <div>Latest Project</div>
         <div>Latest blog post</div>
