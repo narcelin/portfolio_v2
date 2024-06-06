@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function MyButton({
   children,
@@ -17,12 +17,7 @@ export default function MyButton({
   if (justArrow) {
     return (
       <button className="text-[#303030] border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center">
-        <Image
-          src="/assets/arrow-narrow-right.svg"
-          width={25} //ADJUST TO DYNAMIC
-          height={25}
-          alt="arrow"
-        />
+        <FaArrowRightLong size={15} />
       </button>
     );
   }
@@ -45,14 +40,7 @@ export default function MyButton({
   return (
     <button className={`flex flex-row gap-2 ${buttonClass}`}>
       <div>{children}</div>
-      {withArrow ? (
-        <Image
-          src="/assets/arrow-narrow-right.svg"
-          width={25} //ADJUST TO DYNAMIC
-          height={25}
-          alt="arrow"
-        />
-      ) : null}
+      {withArrow ? <FaArrowRightLong size={15} /> : null}
     </button>
   );
 }

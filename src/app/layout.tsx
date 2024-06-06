@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
+import NavigationBar from "./components/sections/NavigationBar";
+import Footer from "./components/sections/Footer";
+
 const inter_Tight = Inter_Tight({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -20,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter_Tight.variable} font-sans`}>{children}</body>
+      <body className={`${inter_Tight.variable} font-sans w-4/5 mx-auto`}>
+        {<NavigationBar />}
+        {children}
+        {<Footer />}
+      </body>
     </html>
   );
 }

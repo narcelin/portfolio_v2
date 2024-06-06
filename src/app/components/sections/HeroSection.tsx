@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 
+import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
 
 export default function HeroSection() {
@@ -15,9 +16,9 @@ export default function HeroSection() {
           <FaInstagram size={20} />
           <FaTwitter size={20} />
         </div>
-        <h1 className="text-7xl font-semibold">
-          👋 Hey there, <br /> It&apos;s Nicolas.
-        </h1>
+        {/* Issue will arise when dynamically adding mobile views */}
+        <MyHeader headerType={1}>👋 Hey there,</MyHeader>
+        <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
         <p className="text-shadow text-xl">
           Welcome to my creative corner! I&apos;m Nicolas Arcelin, a passionate
           UI/UX designer with three years of experience crafting digital

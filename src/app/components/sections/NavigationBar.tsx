@@ -1,40 +1,39 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import MyButton from "../MyButton";
+import MyNavLink from "../MyNavLink";
 
 export default function NavigationBar() {
+  const pathname = usePathname();
+
   return (
-    <section className="border border-red-500 px-32">
-      <div className="flex flex-row justify-between h-28 items-center">
-        <div className="flex flex-row">
+    <section className="border border-transparent border-b-shadow px-32">
+      <div className="flex flex-row justify-between h-20 items-center">
+        <div className="flex flex-row font-semibold text-2xl">
           <div className="text-[#303030]">Nicolas&nbsp;</div>
           <div className="text-[#909090]">Arcelin</div>
         </div>
         <ul className="flex flex-row gap-4">
           <li>
-            <button className="text-[#303030]">Home</button>
+            {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
+            <MyNavLink id="">Home</MyNavLink>
           </li>
           <li>
-            <button className="text-[#303030]">About</button>
+            <MyNavLink id="about">About</MyNavLink>
           </li>
           <li>
-            <button className="text-[#303030]">Works</button>
+            <MyNavLink id="works">Works</MyNavLink>
           </li>
           <li>
-            <button className="text-[#303030]">Services</button>
+            <MyNavLink id="services">Services</MyNavLink>
           </li>
           <li>
-            <button className="text-[#303030]">Contact</button>
+            <MyNavLink id="contact">Contact</MyNavLink>
           </li>
         </ul>
-        <button className="text-[#303030] border border-[#757575] rounded-full w-36 h-12 flex flex-row justify-center items-center">
-          <div>Let&apos;s Talk</div>
-          <Image
-            src="/assets/arrow-narrow-right.svg"
-            width={25} //ADJUST TO DYNAMIC
-            height={25}
-            alt="arrow"
-          />
-        </button>
+        <MyButton withArrow>Let&apos;s Talk</MyButton>
       </div>
     </section>
   );

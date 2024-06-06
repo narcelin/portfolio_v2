@@ -1,3 +1,4 @@
+import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
 
 export default function AboutSnippet() {
@@ -7,10 +8,8 @@ export default function AboutSnippet() {
         IMAGE
       </div>
       <div className="w-1/2 flex flex-col  gap-10">
-        <div className="text-5xl font-semibold">
-          Digital Experiences with Passion
-        </div>
-        <div className="text-shadow text-xl">
+        <MyHeader headerType={2}>Digital Experiences with Passion</MyHeader>
+        <div className="text-shadow text-xl leading-">
           Ever since I was young, I&apos;ve been fascinate by the intersection
           of design and technology. This curiosity led me dto pursue a degree in
           Graphic Design.

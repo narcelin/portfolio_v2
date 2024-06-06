@@ -1,8 +1,10 @@
+import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
 
 export default function Showcase() {
   return (
     <section className="py-10 flex flex-col gap-10">
+      <MyHeader headerType={3}>Explore My Latest Works</MyHeader>
       <div className="flex flex-row gap-10 w-full border border-red-500">
         <div className="w-1/2">
           <div className="w-full text-6xl border border-red-500 flex flex-row justify-center items-center h-60">
@@ -10,9 +12,7 @@ export default function Showcase() {
           </div>
           <div className="flex flex-row justify-between">
             <div className="flex flex-col">
-              <div className="text-2xl font-semibold">
-                Energy Saver - Website design
-              </div>
+              <MyHeader headerType={3}>Energy Saver - Website design</MyHeader>
               <div className="text-shadow">Web Design</div>
             </div>
             <MyButton justArrow />
@@ -24,9 +24,7 @@ export default function Showcase() {
           </div>
           <div className="flex flex-row justify-between">
             <div className="flex flex-col">
-              <div className="text-2xl font-semibold">
-                Creative Agency Design
-              </div>
+              <MyHeader headerType={3}>Creative Agency Design</MyHeader>
               <div className="text-shadow">Landing page Design</div>
             </div>
             <MyButton justArrow />
@@ -39,7 +37,7 @@ export default function Showcase() {
         </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-col">
-            <div className="text-2xl font-semibold">Creative Agency Design</div>
+            <MyHeader headerType={3}>Creative Agency Design</MyHeader>
             <div className="text-shadow">Landing page Design</div>
           </div>
           <MyButton justArrow />
