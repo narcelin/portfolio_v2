@@ -1,12 +1,17 @@
+import Image from "next/image";
+
+import MyImageContainer from "../MyImageContainer";
 import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
 
 export default function AboutSnippet() {
   return (
-    <section className="flex flex-row gap-10 py-10">
-      <div className="text-9xl w-1/2 border border-red-500 flex flex-row justify-center items-center">
-        IMAGE
-      </div>
+    <section className="flex flex-col md:flex-row items-center gap-10 py-10">
+      <MyImageContainer
+        alternateTxt="picture of me"
+        size={800}
+        source="/assets/imgs/img2.jpg"
+      />
       <div className="w-1/2 flex flex-col  gap-10">
         <MyHeader headerType={2}>Digital Experiences with Passion</MyHeader>
         <div className="text-shadow text-xl leading-">

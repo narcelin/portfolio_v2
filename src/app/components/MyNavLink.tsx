@@ -9,7 +9,6 @@ export default function MyNavLink({
   id: string;
 }) {
   const pathname = usePathname();
-  console.log(`/${children}`);
 
   return (
     <Link

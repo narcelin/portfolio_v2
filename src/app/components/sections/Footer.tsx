@@ -1,6 +1,5 @@
 "use client";
 import MyNavLink from "../MyNavLink";
-import MyButton from "../MyButton";
 
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";

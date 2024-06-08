@@ -44,7 +44,7 @@ export default function Showcase() {
         </div>
       </div>
       <div className="w-full border border-red-500 flex flex-row justify-center">
-        <MyButton withArrow>Let&apos;s See More</MyButton>
+        <MyButton>Let&apos;s See More</MyButton>
       </div>
     </section>
   );
