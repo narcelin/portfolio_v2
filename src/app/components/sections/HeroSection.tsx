@@ -31,8 +31,8 @@ export default function HeroSection() {
         <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
         <p className="text-shadow text-xl">
           Welcome to my creative corner! I&apos;m Nicolas Arcelin, a passionate
-          UI/UX designer with three years of experience crafting digital
-          experiences that are both visually stunning and user-friendly.
+          programmer with years of project managment experience and developing
+          software.
         </p>
         <div className="flex flex-row gap-10">
           <MyButton fancy withArrow>

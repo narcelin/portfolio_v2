@@ -1,3 +1,5 @@
+"use client";
+
 import HeroSection from "./components/sections/HeroSection";
 import AboutSnippet from "./components/sections/AboutSnippet";
 import Showcase from "./components/sections/Showcase";

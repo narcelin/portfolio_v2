@@ -16,14 +16,16 @@ export default function AboutSnippet() {
         <MyHeader headerType={2}>Digital Experiences with Passion</MyHeader>
         <div className="text-shadow text-xl leading-">
           Ever since I was young, I&apos;ve been fascinate by the intersection
-          of design and technology. This curiosity led me dto pursue a degree in
-          Graphic Design.
+          of effeciency and technology. This curiosity led me to pursue a degree
+          in Engineering.
         </div>
         <div className="text-shadow text-xl">
-          where I honded my skilled in visual communication and digital
-          artidtry. As I delved deeper into the world of design, I found my true
-          calling in UI/UX design - the perfect blend of aesthetics and
-          functionality
+          Where I honded my skilled in design and development. As I progressed
+          on my journey, I found myself always creating my own scripts for many
+          design programs we used in civil engineering.
+        </div>
+        <div className="text-shadow text-xl">
+          I have then took the initiative to pursue a career is programming.
         </div>
         <div className="flex flex-row gap-10">
           <MyButton fancy withArrow>
