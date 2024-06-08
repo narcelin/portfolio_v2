@@ -25,3 +25,5 @@ Breakpoints:
 
     Can have a rang. Example:
     className="md:max-xl:flex"
+
+## Alerts React-Toastify

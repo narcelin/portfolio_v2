@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
+import ToastProvider from "./toasterProvider";
 import NavigationBar from "./components/sections/NavigationBar";
 import Footer from "./components/sections/Footer";
 
@@ -26,9 +27,11 @@ export default function RootLayout({
       <body
         className={`${inter_Tight.variable} font-sans md:w-4/5 mx-auto border border-x-8 border-red-500 md:border-blue-500 xl:border-yellow-500`}
       >
-        {<NavigationBar />}
-        {children}
-        {<Footer />}
+        <ToastProvider>
+          {<NavigationBar />}
+          {children}
+          {<Footer />}
+        </ToastProvider>
       </body>
     </html>
   );

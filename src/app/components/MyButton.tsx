@@ -1,3 +1,7 @@
+"use client";
+
+import { toast } from "react-toastify";
+
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function MyButton({
@@ -13,6 +17,12 @@ export default function MyButton({
   suttle?: boolean;
   justArrow?: boolean;
 }) {
+  const alert = () => {
+    toast.success("Button Clicked!", {
+      position: "top-left",
+    });
+  };
+
   //Just arrow button
   if (justArrow) {
     return (
@@ -38,7 +48,10 @@ export default function MyButton({
     : "text-[#303030] border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center";
 
   return (
-    <button className={`flex flex-row gap-2 ${buttonClass}`}>
+    <button
+      onClick={() => alert()}
+      className={`flex flex-row gap-2 ${buttonClass}`}
+    >
       <div>{children}</div>
       {withArrow ? <FaArrowRightLong size={15} /> : null}
     </button>
