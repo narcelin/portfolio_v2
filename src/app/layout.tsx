@@ -28,7 +28,7 @@ export default function RootLayout({
         className={`${inter_Tight.variable} font-sans md:w-4/5 mx-auto border border-x-8 border-red-500 md:border-blue-500 xl:border-yellow-500`}
       >
         <ToastProvider>
-          {<NavigationBar />}
+          {/* {<NavigationBar />} */}
           {children}
           {<Footer />}
         </ToastProvider>

@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <section className="py-10 flex flex-row justify-between border border-transparent border-t-shadow">
+    <section className="py-10 flex flex-col md:flex-row justify-between items-center gap-4 border border-transparent border-t-shadow">
       <div className="flex flex-row gap-5">
         <FaGithub size={20} />
         <FaFacebook size={20} />

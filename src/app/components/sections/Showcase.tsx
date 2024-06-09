@@ -5,8 +5,8 @@ export default function Showcase() {
   return (
     <section className="py-10 flex flex-col gap-10">
       <MyHeader headerType={3}>Explore My Latest Works</MyHeader>
-      <div className="flex flex-row gap-10 w-full border border-red-500">
-        <div className="w-1/2">
+      <div className="flex flex-col md:flex-row items-center gap-10 w-full border border-red-500">
+        <div className="w-full md:w-1/2">
           <div className="w-full text-6xl border border-red-500 flex flex-row justify-center items-center h-60">
             IMAGE/PREV
           </div>
@@ -18,7 +18,7 @@ export default function Showcase() {
             <MyButton justArrow />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <div className="w-full text-6xl border border-red-500 flex flex-row justify-center items-center h-60">
             IMAGE/PREV
           </div>
