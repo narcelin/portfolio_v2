@@ -24,9 +24,7 @@ export default function MyImageContainer({
     responsiveClass = "flex";
   }
   return (
-    <div
-      className={`${classNames} ${responsiveClass} flex-row justify-center items-center text-9xl w-1/2 border border-red-500 2lg:border-blue-500 `}
-    >
+    <div className={`${classNames} ${responsiveClass} `}>
       <Image src={source} alt={alternateTxt} height={size} width={size} />
     </div>
   );

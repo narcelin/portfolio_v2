@@ -12,7 +12,7 @@ export default function AboutSnippet() {
         size={800}
         source="/assets/imgs/img2.jpg"
       />
-      <div className="w-1/2 flex flex-col  gap-10">
+      <div className="md:w-1/2 flex flex-col  gap-10">
         <MyHeader headerType={2}>Digital Experiences with Passion</MyHeader>
         <div className="text-shadow text-xl leading-">
           Ever since I was young, I&apos;ve been fascinate by the intersection
@@ -27,7 +27,7 @@ export default function AboutSnippet() {
         <div className="text-shadow text-xl">
           I have then took the initiative to pursue a career is programming.
         </div>
-        <div className="flex flex-row gap-10">
+        <div className="flex flex-row justify-center gap-10">
           <MyButton fancy withArrow>
             Let&apos;s Talk
           </MyButton>

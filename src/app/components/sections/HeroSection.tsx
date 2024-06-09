@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 
 import MyImageContainer from "../MyImageContainer";
 import MyHeader from "../MyHeader";
@@ -19,9 +20,14 @@ export default function HeroSection() {
         alternateTxt="picture of me"
         size={800}
       />
-      <div className="w-1/2 flex flex-col gap-10">
+      <div className="md:w-1/2 flex flex-col gap-10">
         <div className="flex flex-row gap-10">
-          <FaGithub size={20} />
+          <a href="https://github.com/narcelin" target="_blank">
+            <FaGithub size={20} />
+          </a>
+          <a href="https://www.linkedin.com/in/narcelin/" target="_blank">
+            <FaLinkedin size={20} />
+          </a>
           <FaFacebook size={20} />
           <FaInstagram size={20} />
           <FaTwitter size={20} />
@@ -34,7 +40,7 @@ export default function HeroSection() {
           programmer with years of project managment experience and developing
           software.
         </p>
-        <div className="flex flex-row gap-10">
+        <div className="flex flex-row justify-center gap-10">
           <MyButton fancy withArrow>
             Say Hello
           </MyButton>
@@ -42,10 +48,11 @@ export default function HeroSection() {
         </div>
       </div>
       <MyImageContainer
+        classNames="w-1/2 border border-red-500"
         device="ipad"
         source="/assets/imgs/img1.jpg"
         alternateTxt="picture of me"
-        size={800}
+        size={1000}
       />
     </section>
   );

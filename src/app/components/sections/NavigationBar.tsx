@@ -1,12 +1,14 @@
 "use client";
+import { FaGripLines } from "react-icons/fa6";
+import { FaGripLinesVertical } from "react-icons/fa6";
+
 import { useState } from "react";
 
 import MyButton from "../MyButton";
 import MyNavLink from "../MyNavLink";
 
 export default function NavigationBar() {
-  const [navBarLinks, setNavBarLinks] = useState(false);
-
+  const [mobileNavMenu, setMobileNavMenu] = useState(true);
   return (
     <section className="border border-transparent border-b-shadow">
       <div className="flex flex-row justify-between h-20 items-center">
@@ -32,19 +34,32 @@ export default function NavigationBar() {
             <MyNavLink id="contact">Contact</MyNavLink>
           </li>
         </ul>
-        <MyButton withArrow>Let&apos;s Talk</MyButton>
-        <button
-          className="md:hidden"
-          onClick={() => {
-            setNavBarLinks(!navBarLinks);
-          }}
-        >
-          HAMBURDER MENU
+        <button onClick={() => setMobileNavMenu(!mobileNavMenu)}>
+          {mobileNavMenu ? <FaGripLinesVertical /> : <FaGripLines />}
         </button>
-        <ul className="md:hidden">
-          {navBarLinks ? <li>HAMBURGER MENU</li> : null}
-        </ul>
+        <MyButton withArrow>Let&apos;s Talk</MyButton>
       </div>
+
+      {mobileNavMenu ? (
+        <ul className="flex flex-row md:hidden justify-between gap-4 pb-5">
+          <li>
+            {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
+            <MyNavLink id="">Home</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink id="about">About</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink id="works">Works</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink id="services">Services</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink id="contact">Contact</MyNavLink>
+          </li>
+        </ul>
+      ) : null}
     </section>
   );
 }
