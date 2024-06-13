@@ -36,9 +36,9 @@ export default function HeroSection() {
         <MyHeader headerType={1}>👋 Hey there,</MyHeader>
         <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
         <p className="text-shadow text-xl">
-          Welcome to my creative corner! I&apos;m Nicolas Arcelin, a passionate
-          programmer with years of project managment experience and developing
-          software.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+          explicabo eius repellendus delectus ullam neque esse repellat amet
+          ducimus ipsum!
         </p>
         <div className="flex flex-row justify-center gap-10">
           <MyButton fancy withArrow>

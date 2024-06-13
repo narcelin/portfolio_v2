@@ -7,21 +7,25 @@ export default function MyHeader({
   className?: string;
   headerType: number;
 }) {
-  let headerClassName;
+  let headerTypeClasses;
 
   switch (headerType) {
     case 1:
-      headerClassName = "text-6xl font-semibold leadingIssue!!!";
+      headerTypeClasses = "text-6xl font-semibold leadingIssue!!!";
       break;
     case 2:
-      headerClassName = "text-5xl font-semibold leading-tight";
+      headerTypeClasses = "text-5xl font-semibold leading-tight";
       break;
     case 3:
-      headerClassName = "text-2xl font-semibold";
+      headerTypeClasses = "text-2xl font-semibold";
+      break;
+    case 4:
+      headerTypeClasses =
+        "text-2xl font-semibold bg-my-gradient90 text-transparent bg-clip-text";
       break;
     default:
       break;
   }
 
-  return <h1 className={`${headerClassName} ${className}`}>{children}</h1>;
+  return <h1 className={`${headerTypeClasses} ${className}`}>{children}</h1>;
 }

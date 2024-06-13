@@ -15,17 +15,19 @@ export default function AboutSnippet() {
       <div className="md:w-1/2 flex flex-col  gap-10">
         <MyHeader headerType={2}>Digital Experiences with Passion</MyHeader>
         <div className="text-shadow text-xl leading-">
-          Ever since I was young, I&apos;ve been fascinate by the intersection
-          of effeciency and technology. This curiosity led me to pursue a degree
-          in Engineering.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+          voluptatem ad et doloremque a error, eos ducimus tempore ipsum
+          officiis!
         </div>
         <div className="text-shadow text-xl">
-          Where I honded my skilled in design and development. As I progressed
-          on my journey, I found myself always creating my own scripts for many
-          design programs we used in civil engineering.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          deserunt dolorum a perspiciatis ratione enim! Pariatur quod eligendi
+          id velit eaque necessitatibus debitis nisi cupiditate? Perferendis
+          accusamus hic natus mollitia exercitationem voluptatum delectus beatae
+          fuga?
         </div>
         <div className="text-shadow text-xl">
-          I have then took the initiative to pursue a career is programming.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, at?
         </div>
         <div className="flex flex-row justify-center gap-10">
           <MyButton fancy withArrow>

@@ -8,7 +8,7 @@ import MyButton from "../MyButton";
 import MyNavLink from "../MyNavLink";
 
 export default function NavigationBar() {
-  const [mobileNavMenu, setMobileNavMenu] = useState(true);
+  const [mobileNavMenu, setMobileNavMenu] = useState(false);
   return (
     <section className="border border-transparent border-b-shadow">
       <div className="flex flex-row justify-between h-20 items-center">
@@ -34,14 +34,21 @@ export default function NavigationBar() {
             <MyNavLink id="contact">Contact</MyNavLink>
           </li>
         </ul>
-        <button onClick={() => setMobileNavMenu(!mobileNavMenu)}>
-          {mobileNavMenu ? <FaGripLinesVertical /> : <FaGripLines />}
+        <button
+          className="md:hidden"
+          onClick={() => setMobileNavMenu(!mobileNavMenu)}
+        >
+          {mobileNavMenu ? (
+            <FaGripLinesVertical className="" />
+          ) : (
+            <FaGripLines />
+          )}
         </button>
         <MyButton withArrow>Let&apos;s Talk</MyButton>
       </div>
 
       {mobileNavMenu ? (
-        <ul className="flex flex-row md:hidden justify-between gap-4 pb-5">
+        <ul className="flex flex-row anitmate-bounce md:hidden justify-between gap-4 pb-5">
           <li>
             {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
             <MyNavLink id="">Home</MyNavLink>
