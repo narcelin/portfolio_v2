@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import MyButton from "../MyButton";
 import MyNavLink from "../MyNavLink";
+import MyThemeSwitch from "../MyThemeSwitch";
 
 export default function NavigationBar() {
   const [mobileNavMenu, setMobileNavMenu] = useState(false);
@@ -45,6 +46,7 @@ export default function NavigationBar() {
           )}
         </button>
         <MyButton withArrow>Let&apos;s Talk</MyButton>
+        <MyThemeSwitch />
       </div>
 
       {mobileNavMenu ? (

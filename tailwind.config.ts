@@ -7,6 +7,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       //ISSUE WITH TAILWIN FONT
@@ -17,7 +18,7 @@ const config: Config = {
         primary: "gradient-to-br from-[#B86ADF] via-[#FF6C63] to-[#FFB147]",
         secondary: "#030712",
         accent: "#FDFFED",
-        shadow: "#909090"
+        shadow: "#909090",
       },
       backgroundImage: {
         'my-gradient': 'linear-gradient(0deg, #B86ADF 2.11%,#FF6C63, #FFB147 100%)',

@@ -26,4 +26,14 @@ Breakpoints:
     Can have a rang. Example:
     className="md:max-xl:flex"
 
+Need to start using "Container" class!!!
+
 ## Alerts React-Toastify
+
+Toastify parameters [https://fkhadra.github.io/react-toastify/introduction/]
+
+## Dark mode Next-Themes
+
+(https://www.davegray.codes/posts/light-dark-mode-nextjs-app-router-tailwind)
+
+Create dynamic themes (https://www.youtube.com/watch?v=vIBKSmWAdIA). Beware of Nextjs and localStorage
