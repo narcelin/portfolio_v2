@@ -24,7 +24,6 @@ export default function Home() {
         transition: Slide,
       });
     };
-    underConstructionAlert();
   }, []);
 
   return (
@@ -33,13 +32,6 @@ export default function Home() {
       <AboutSnippet />
       <Showcase />
       <ReachMe />
-      <div className="border border-green-500 p-24 m-10">
-        <div>My offerings to you</div>
-        <div>Latest Project</div>
-        <div>Latest blog post</div>
-        <div>Contact me</div>
-        <div>Footer</div>
-      </div>
     </main>
   );
 }

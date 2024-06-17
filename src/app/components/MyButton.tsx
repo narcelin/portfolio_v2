@@ -10,23 +10,29 @@ export default function MyButton({
   withArrow,
   suttle,
   justArrow,
+  onClick,
 }: {
   children?: string;
   fancy?: boolean;
   withArrow?: boolean;
   suttle?: boolean;
   justArrow?: boolean;
+  onClick: Function;
 }) {
-  const alert = () => {
+  const onClickHandler = () => {
     toast.success("Button Clicked!", {
       position: "top-left",
     });
+    onClick();
   };
 
   //Just arrow button
   if (justArrow) {
     return (
-      <button className="text-[#303030] border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center">
+      <button
+        onClick={() => onClickHandler()}
+        className="text-[#303030] border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center"
+      >
         <FaArrowRightLong size={15} />
       </button>
     );
@@ -49,7 +55,7 @@ export default function MyButton({
 
   return (
     <button
-      onClick={() => alert()}
+      onClick={() => onClickHandler()}
       className={`flex flex-row gap-2 ${buttonClass}`}
     >
       <div>{children}</div>

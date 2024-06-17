@@ -18,9 +18,9 @@ export default function HeroSection() {
         classNames="md:flex"
         source="/assets/imgs/img1.jpg"
         alternateTxt="picture of me"
-        size={800}
+        size={1000}
       />
-      <div className="md:w-1/2 flex flex-col gap-10">
+      <div className="md:w-3/4 xl:w-full flex flex-col gap-10">
         <div className="flex flex-row gap-10">
           <a href="https://github.com/narcelin" target="_blank">
             <FaGithub size={20} />
@@ -33,22 +33,25 @@ export default function HeroSection() {
           <FaTwitter size={20} />
         </div>
         {/* Issue will arise when dynamically adding mobile views */}
-        <MyHeader headerType={1}>👋 Hey there,</MyHeader>
-        <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
+        <div>
+          <MyHeader headerType={1}>👋 Hey there,</MyHeader>
+          <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
+        </div>
         <p className="text-shadow text-xl">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-          explicabo eius repellendus delectus ullam neque esse repellat amet
-          ducimus ipsum!
+          Welcome to my corner of the web. Please feel free to contact me at any
+          time.
         </p>
         <div className="flex flex-row justify-center gap-10">
-          <MyButton fancy withArrow>
+          <MyButton onClick={() => console.log("Clicked")} fancy withArrow>
             Say Hello
           </MyButton>
-          <MyButton>My Portfolio</MyButton>
+          <MyButton onClick={() => console.log("Clicked")}>
+            My Portfolio
+          </MyButton>
         </div>
       </div>
       <MyImageContainer
-        classNames="w-1/2 border border-red-500"
+        classNames="border border-red-500"
         device="ipad"
         source="/assets/imgs/img1.jpg"
         alternateTxt="picture of me"

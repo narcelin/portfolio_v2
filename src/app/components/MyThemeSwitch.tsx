@@ -29,7 +29,7 @@ export default function MyThemeSwitch() {
   if (resolvedTheme === "dark") {
     return (
       <div>
-        <div>DARK MODE ACTIVE: </div>
+        {/* <div>DARK MODE ACTIVE: </div> */}
         <FaSun onClick={() => setTheme("light")} />
       </div>
     );
@@ -38,7 +38,7 @@ export default function MyThemeSwitch() {
   if (resolvedTheme === "light") {
     return (
       <div>
-        <div>LIGHT MODE ACTIVE: </div>
+        {/* <div>LIGHT MODE ACTIVE: </div> */}
         <FaMoon onClick={() => setTheme("dark")} />
       </div>
     );

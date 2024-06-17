@@ -24,8 +24,18 @@ export default function MyImageContainer({
     responsiveClass = "flex";
   }
   return (
-    <div className={`${classNames} ${responsiveClass} `}>
-      <Image src={source} alt={alternateTxt} height={size} width={size} />
+    <div
+      className={`${classNames} ${responsiveClass} w-full border border-yellow-500 relative h-96`}
+    >
+      <Image
+        src={source}
+        alt={alternateTxt}
+        // height={size}
+        // width={size}
+        // style={{ maxWidth: "100%", height: "auto" }}
+        fill
+        objectFit="cover"
+      />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import AboutSnippet from "../components/sections/AboutSnippet";
 import ReachMe from "../components/sections/ReachMe";
 
