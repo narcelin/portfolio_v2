@@ -112,7 +112,7 @@ export default function ContactMe() {
           />
         </div>
       </div>
-      <MyButton onClick={() => console.log(emailTarget)} fancy>
+      <MyButton onClick={() => console.log("Cool")} fancy>
         Send Message
       </MyButton>
       {/* <button
