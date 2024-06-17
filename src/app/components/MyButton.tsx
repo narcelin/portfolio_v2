@@ -20,9 +20,9 @@ export default function MyButton({
   onClick: Function;
 }) {
   const onClickHandler = () => {
-    toast.success("Button Clicked!", {
-      position: "top-left",
-    });
+    // toast.success("Button Clicked!", {
+    //   position: "top-left",
+    // });
     onClick();
   };
 

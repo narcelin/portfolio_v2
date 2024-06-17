@@ -38,11 +38,15 @@ export default function AboutSnippet() {
           simple code.
         </div>
         <div className="flex flex-row justify-center gap-10">
-          <MyButton onClick={() => console.log("Clicked")} fancy withArrow>
+          <MyButton
+            onClick={() => window.open("/contact", "_self")}
+            fancy
+            withArrow
+          >
             Let&apos;s Talk
           </MyButton>
-          <MyButton onClick={() => console.log("Clicked")}>
-            Our Services
+          <MyButton onClick={() => window.open("/about", "_self")}>
+            See More
           </MyButton>
         </div>
       </div>

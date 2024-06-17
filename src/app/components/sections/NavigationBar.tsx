@@ -46,10 +46,10 @@ export default function NavigationBar() {
             <FaGripLines />
           )}
         </button>
-        <MyButton onClick={() => console.log("Clicked")} withArrow>
+        <MyButton onClick={() => window.open("/contact", "_self")} withArrow>
           Let&apos;s Talk
         </MyButton>
-        <MyThemeSwitch />
+        {/* <MyThemeSwitch /> */}
       </div>
 
       {mobileNavMenu

@@ -51,7 +51,11 @@ export default function HeroSection() {
           >
             Say Hello
           </MyButton>
-          <MyButton onClick={() => console.log("Clicked")}>My CV</MyButton>
+          <MyButton
+            onClick={() => window.open("/assets/narcelin_CV2024.pdf", "_blank")}
+          >
+            My CV
+          </MyButton>
         </div>
       </div>
       <MyImageContainer
