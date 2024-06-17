@@ -23,3 +23,20 @@ export default function MyNavLink({
     </Link>
   );
 }
+
+export function NavLinks(classNames: string) {
+  return (
+    <ul className={`${classNames}`}>
+      <li>
+        {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
+        <MyNavLink id="">Home</MyNavLink>
+      </li>
+      <li>
+        <MyNavLink id="about">About</MyNavLink>
+      </li>
+      <li>
+        <MyNavLink id="contact">Contact</MyNavLink>
+      </li>
+    </ul>
+  );
+}

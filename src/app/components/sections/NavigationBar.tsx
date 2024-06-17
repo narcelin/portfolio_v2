@@ -8,26 +8,25 @@ import MyButton from "../MyButton";
 import MyNavLink from "../MyNavLink";
 import MyThemeSwitch from "../MyThemeSwitch";
 
+import { NavLinks } from "../MyNavLink";
+
 export default function NavigationBar() {
   const [mobileNavMenu, setMobileNavMenu] = useState(false);
 
-  const navLinks = (classNames: string) => (
-    <ul className={`${classNames}`}>
-      <li>
-        {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
-        <MyNavLink id="">Home</MyNavLink>
-      </li>
-      <li>
-        <MyNavLink id="about">About</MyNavLink>
-      </li>
-      <li>
-        <MyNavLink id="contact">Contact</MyNavLink>
-      </li>
-      <li>
-        <MyNavLink id="CV">CV</MyNavLink>
-      </li>
-    </ul>
-  );
+  // const navLinks = (classNames: string) => (
+  //   <ul className={`${classNames}`}>
+  //     <li>
+  //       {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
+  //       <MyNavLink id="">Home</MyNavLink>
+  //     </li>
+  //     <li>
+  //       <MyNavLink id="about">About</MyNavLink>
+  //     </li>
+  //     <li>
+  //       <MyNavLink id="contact">Contact</MyNavLink>
+  //     </li>
+  //   </ul>
+  // );
 
   return (
     <section className="border border-transparent border-b-shadow">
@@ -36,7 +35,7 @@ export default function NavigationBar() {
           <div className="text-[#303030]">Nicolas&nbsp;</div>
           <div className="text-[#909090]">Arcelin</div>
         </div>
-        {navLinks("hidden md:flex flex-row gap-4")}
+        {NavLinks("hidden md:flex flex-row gap-4")}
         <button
           className="md:hidden"
           onClick={() => setMobileNavMenu(!mobileNavMenu)}
@@ -54,7 +53,7 @@ export default function NavigationBar() {
       </div>
 
       {mobileNavMenu
-        ? navLinks(
+        ? NavLinks(
             "flex flex-row anitmate-bounce md:hidden justify-between gap-4 pb-5"
           )
         : null}

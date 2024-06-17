@@ -1,5 +1,8 @@
 "use client";
+
 import MyNavLink from "../MyNavLink";
+
+import { NavLinks } from "../MyNavLink";
 
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
@@ -15,24 +18,7 @@ export default function Footer() {
         <FaInstagram size={20} />
         <FaTwitter size={20} />
       </div>
-      <ul className="flex flex-row gap-4">
-        <li>
-          {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
-          <MyNavLink id="">Home</MyNavLink>
-        </li>
-        <li>
-          <MyNavLink id="about">About</MyNavLink>
-        </li>
-        <li>
-          <MyNavLink id="works">Works</MyNavLink>
-        </li>
-        <li>
-          <MyNavLink id="services">Services</MyNavLink>
-        </li>
-        <li>
-          <MyNavLink id="contact">Contact</MyNavLink>
-        </li>
-      </ul>
+      {NavLinks("flex flex-row gap-4")}
     </section>
   );
 }

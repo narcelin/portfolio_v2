@@ -60,7 +60,7 @@ export default function Showcase() {
           </div>
         </div>
       </div>
-      <div className="xl:w-2/3">
+      <div className="w-full xl:w-2/3">
         <MyImageContainer
           classNames="text-6xl flex flex-row justify-center items-center"
           size={1000}

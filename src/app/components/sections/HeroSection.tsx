@@ -44,7 +44,11 @@ export default function HeroSection() {
           time.
         </p>
         <div className="flex flex-row justify-center gap-10">
-          <MyButton onClick={() => console.log("Clicked")} fancy withArrow>
+          <MyButton
+            onClick={() => window.open("/contact", "_self")}
+            fancy
+            withArrow
+          >
             Say Hello
           </MyButton>
           <MyButton onClick={() => console.log("Clicked")}>My CV</MyButton>

@@ -30,9 +30,8 @@ export default function MyImageContainer({
         alt={alternateTxt}
         // height={size}
         // width={size}
-        // style={{ maxWidth: "100%", height: "auto" }}
+        style={{ objectFit: "cover" }}
         fill
-        objectFit="cover"
       />
     </div>
   );
