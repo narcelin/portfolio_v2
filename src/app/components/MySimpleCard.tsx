@@ -1,3 +1,5 @@
+"use client";
+
 import MyHeader from "./MyHeader";
 import MyButton from "./MyButton";
 

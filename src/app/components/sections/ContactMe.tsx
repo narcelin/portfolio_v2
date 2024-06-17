@@ -5,15 +5,56 @@ import { useState } from "react";
 import MyButton from "../MyButton";
 
 export default function ContactMe() {
-  const send = () => {
-    console.log("SENT");
-  };
+  const [usersName, setUsersName] = useState("");
+  const [usersEmail, setUsersEmail] = useState("");
+  const [usersSubject, setUsersSubject] = useState("");
+  const [usersPhoneNumber, setUsersPhoneNumber] = useState("");
+  const [usersMessage, setUsersMessage] = useState("");
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+
+  const send = async () => {
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          userEmail: usersEmail,
+          subject: usersSubject,
+          message: usersMessage,
+        }),
+      });
+
+      console.log(response);
+      if (!response.ok) {
+        setEmailSent(false);
+
+        setTimeout(() => {
+          setEmailSent(true);
+        }, 8000);
+
+        throw new Error("Failed to send email");
+      }
+
+      if (response.status === 200) {
+        console.log("Email Sent");
+        setEmailSubmitted(true);
+        setUsersEmail("");
+        setUsersSubject("");
+        setUsersMessage("");
+
+        setTimeout(() => {
+          setEmailSubmitted(false);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error); // Handle error
+    }
+  };
 
   return (
     <form className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3">
@@ -29,8 +70,8 @@ export default function ContactMe() {
             className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="text"
             id="name"
-            value={`${name}`}
-            onChange={(e) => setName(e.target.value)}
+            value={`${usersName}`}
+            onChange={(e) => setUsersName(e.target.value)}
             required
             placeholder="John Doe"
           />
@@ -48,8 +89,8 @@ export default function ContactMe() {
             className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="email"
             id="email"
-            value={`${email}`}
-            onChange={(e) => setEmail(e.target.value)}
+            value={`${usersEmail}`}
+            onChange={(e) => setUsersEmail(e.target.value)}
             required
             placeholder="jdoe@email.com"
           />
@@ -67,8 +108,8 @@ export default function ContactMe() {
             className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="subject"
             id="subject"
-            value={`${subject}`}
-            onChange={(e) => setSubject(e.target.value)}
+            value={`${usersSubject}`}
+            onChange={(e) => setUsersSubject(e.target.value)}
             required
             placeholder="Well, hello there."
           />
@@ -86,8 +127,8 @@ export default function ContactMe() {
             className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="tel"
             id="phoneNumber"
-            value={`${phoneNumber}`}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            value={`${usersPhoneNumber}`}
+            onChange={(e) => setUsersPhoneNumber(e.target.value)}
             required
             placeholder="+1 (555) 555 5555"
           />
@@ -105,14 +146,14 @@ export default function ContactMe() {
             className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="text"
             id="message"
-            value={`${message}`}
-            onChange={(e) => setMessage(e.target.value)}
+            value={`${usersMessage}`}
+            onChange={(e) => setUsersMessage(e.target.value)}
             required
             placeholder="Hope you are having a wonderful day."
           />
         </div>
       </div>
-      <MyButton onClick={() => console.log("Cool")} fancy>
+      <MyButton onClick={send} fancy>
         Send Message
       </MyButton>
       {/* <button
