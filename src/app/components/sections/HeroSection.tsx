@@ -47,13 +47,11 @@ export default function HeroSection() {
           <MyButton onClick={() => console.log("Clicked")} fancy withArrow>
             Say Hello
           </MyButton>
-          <MyButton onClick={() => console.log("Clicked")}>
-            My Portfolio
-          </MyButton>
+          <MyButton onClick={() => console.log("Clicked")}>My CV</MyButton>
         </div>
       </div>
       <MyImageContainer
-        classNames="border border-red-500"
+        classNames=""
         device="ipad"
         source="/assets/imgs/img1.jpg"
         alternateTxt="picture of me"

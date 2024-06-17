@@ -24,6 +24,7 @@ export default function Home() {
         transition: Slide,
       });
     };
+    underConstructionAlert();
   }, []);
 
   return (

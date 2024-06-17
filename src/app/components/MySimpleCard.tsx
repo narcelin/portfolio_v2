@@ -16,7 +16,7 @@ export default function MySimpleCard({
 }) {
   return (
     <div className="w-full md:w-1/2">
-      <div className="w-full text-6xl border border-red-500 flex flex-row justify-center items-center h-60">
+      <div className="w-full text-6xl flex flex-row justify-center items-center h-60">
         {imgSrc}
       </div>
       <div className="flex flex-row justify-between">
