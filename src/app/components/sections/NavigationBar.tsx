@@ -54,7 +54,7 @@ export default function NavigationBar() {
 
       {mobileNavMenu
         ? NavLinks(
-            "flex flex-row anitmate-bounce md:hidden justify-between gap-4 pb-5"
+            "flex flex-row anitmate-bounce md:hidden justify-around gap-4 pb-5"
           )
         : null}
     </section>

@@ -86,9 +86,9 @@ export default function Showcase() {
         </div>
       </div>
       <div className="w-full flex flex-row justify-center">
-        <MyButton onClick={() => console.log("Clicked")}>
+        {/* <MyButton onClick={() => console.log("Clicked")}>
           Let&apos;s See More
-        </MyButton>
+        </MyButton> */}
       </div>
     </section>
   );
