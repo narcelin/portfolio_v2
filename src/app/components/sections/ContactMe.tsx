@@ -5,6 +5,31 @@ import { useState } from "react";
 import MyButton from "../MyButton";
 
 export default function ContactMe() {
+  {
+    //Simplified field values
+    const initValues = {
+      name: "",
+      email: "",
+      subject: "",
+      phoneNumber: "",
+      message: "",
+    };
+
+    const initState = { values: initValues };
+
+    const [state, setState] = useState(initState);
+    const [touched, setTouched] = useState({});
+
+    const handleChange = ({ target }: { target: HTMLInputElement }) =>
+      setState((prev) => ({
+        ...prev,
+        values: {
+          ...prev.values,
+          [target.name]: target.value,
+        },
+      }));
+  }
+
   const [usersName, setUsersName] = useState("");
   const [usersEmail, setUsersEmail] = useState("");
   const [usersSubject, setUsersSubject] = useState("");
