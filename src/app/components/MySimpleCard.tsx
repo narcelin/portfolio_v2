@@ -22,7 +22,7 @@ export default function MySimpleCard({
           <MyHeader headerType={3}>{title}</MyHeader>
           <div className="text-shadow">{subTitle}</div>
         </div>
-        <MyButton justArrow />
+        <MyButton onClick={() => console.log("Clicked")} justArrow />
       </div>
     </div>
   );

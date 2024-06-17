@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import MyInput from "../MyInput";
 import MyButton from "../MyButton";
 
 export default function ContactMe() {
@@ -10,41 +9,109 @@ export default function ContactMe() {
     console.log("SENT");
   };
 
-  const emailTarget = document.getElementById("email");
-  console.log(emailTarget);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <form className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3">
-      <MyInput
-        className="col-span-2"
-        type="name"
-        label="Name"
-        placeHolder="Enter Your Name"
-      />
-      <MyInput
-        className="col-span-2 col-start-3"
-        type="email"
-        label="E-mail"
-        placeHolder="Enter Your E-mail"
-      />
-      <MyInput
-        className="col-span-2 row-start-2"
-        type="subject"
-        label="Subject"
-        placeHolder="Your Subject"
-      />
-      <MyInput
-        className="col-span-2 col-start-3 row-start-2"
-        type="tel"
-        label="Phone"
-        placeHolder="Your Phone Number"
-      />
-      <MyInput
-        className="col-span-4 row-span-1 row-start-3"
-        type="text"
-        label="Message"
-        placeHolder="Write your message here"
-      />
+      <div className="col-span-2">
+        <div className="mb-6">
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            type="text"
+            id="name"
+            value={`${name}`}
+            onChange={(e) => setName(e.target.value)}
+            required
+            placeholder="John Doe"
+          />
+        </div>
+      </div>
+      <div className="col-span-2 col-start-3">
+        <div className="mb-6">
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            type="email"
+            id="email"
+            value={`${email}`}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder="jdoe@email.com"
+          />
+        </div>
+      </div>
+      <div className="col-span-2 row-start-2">
+        <div className="mb-6">
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="subject"
+          >
+            Subject
+          </label>
+          <input
+            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            type="subject"
+            id="subject"
+            value={`${subject}`}
+            onChange={(e) => setSubject(e.target.value)}
+            required
+            placeholder="Well, hello there."
+          />
+        </div>
+      </div>
+      <div className="col-span-2 row-start-2">
+        <div className="mb-6">
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="number"
+          >
+            Number (Not Required)
+          </label>
+          <input
+            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            type="tel"
+            id="phoneNumber"
+            value={`${phoneNumber}`}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+            placeholder="+1 (555) 555 5555"
+          />
+        </div>
+      </div>
+      <div className="col-span-4 row-span-1 row-start-3">
+        <div className="mb-6">
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="text"
+          >
+            Message
+          </label>
+          <input
+            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            type="text"
+            id="message"
+            value={`${message}`}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            placeholder="Hope you are having a wonderful day."
+          />
+        </div>
+      </div>
       <MyButton onClick={() => console.log(emailTarget)} fancy>
         Send Message
       </MyButton>
