@@ -45,7 +45,9 @@ export default function NavigationBar() {
             <FaGripLines />
           )}
         </button>
-        <MyButton withArrow>Let&apos;s Talk</MyButton>
+        <MyButton onClick={() => console.log("Clicked")} withArrow>
+          Let&apos;s Talk
+        </MyButton>
         <MyThemeSwitch />
       </div>
 
