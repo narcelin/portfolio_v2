@@ -37,3 +37,4 @@ Toastify parameters [https://fkhadra.github.io/react-toastify/introduction/]
 (https://www.davegray.codes/posts/light-dark-mode-nextjs-app-router-tailwind)
 
 Create dynamic themes (https://www.youtube.com/watch?v=vIBKSmWAdIA). Beware of Nextjs and localStorage
+(https://www.youtube.com/watch?v=7zqI4qMDdg8)

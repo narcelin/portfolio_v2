@@ -1,5 +1,7 @@
 "use client";
 
+import { useParams } from "next/navigation";
+
 import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
 
@@ -12,10 +14,14 @@ export default function ReachMe({ className }: { className?: string }) {
         Have a project in mind? Let&apos;s get to work.
       </MyHeader>
       <div className="flex flex-row items-center gap-5">
-        <MyButton onClick={() => console.log("Clicked")} fancy withArrow>
+        <MyButton
+          onClick={() => window.open("/contact", "_self")}
+          fancy
+          withArrow
+        >
           Say Hello
         </MyButton>
-        <MyButton onClick={() => console.log("Clicked")}>Say Hello</MyButton>
+        {/* <MyButton onClick={() => window.open("/contact", "_self")}>Say Hello</MyButton> */}
       </div>
     </section>
   );
