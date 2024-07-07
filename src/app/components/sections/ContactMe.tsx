@@ -100,6 +100,8 @@ export default function ContactMe() {
         setUsersEmail("");
         setUsersSubject("");
         setUsersMessage("");
+        setUsersName("");
+        setUsersPhoneNumber("");
 
         setTimeout(() => {
           setEmailSubmitted(false);
