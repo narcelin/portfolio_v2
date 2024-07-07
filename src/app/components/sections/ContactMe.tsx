@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import MyButton from "../MyButton";
+import { Bounce, Slide, toast } from "react-toastify";
 
 export default function ContactMe() {
   {
@@ -39,6 +40,20 @@ export default function ContactMe() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
+  // const underConstructionAlert = () => {
+  //   toast.success("Message Sent", {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: true,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "light",
+  //     transition: Slide,
+  //   });
+  // };
+
   const send = async () => {
     try {
       const response = await fetch("/api/sendEmail", {
@@ -48,7 +63,9 @@ export default function ContactMe() {
           Accept: "application/json",
         },
         body: JSON.stringify({
+          userName: usersName,
           userEmail: usersEmail,
+          userPhone: usersPhoneNumber,
           subject: usersSubject,
           message: usersMessage,
         }),
@@ -66,6 +83,18 @@ export default function ContactMe() {
       }
 
       if (response.status === 200) {
+        toast.success("Message Sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
+
         console.log("Email Sent");
         setEmailSubmitted(true);
         setUsersEmail("");
@@ -178,16 +207,17 @@ export default function ContactMe() {
           />
         </div>
       </div>
-      <MyButton onClick={send} fancy>
+      {/* <MyButton onClick={send} type="submit" fancy>
         Send Message
-      </MyButton>
-      {/* <button
+      </MyButton> */}
+
+      <button
         type="submit"
-        className="text-heading bg-c2 hover:bg-c1 hover:text-c3 front-medium py-2.5 px-5 rounded-lg w-full border bg-white"
+        className="text-white bg-my-gradient90 rounded-full px-5 h-12 flex flex-row justify-center items-center"
         formAction={send}
       >
         Send Message
-      </button> */}
+      </button>
     </form>
   );
 }

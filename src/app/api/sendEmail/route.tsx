@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       ...mailOptions,
       subject: `${data.subject}`,
       text: "Unable to render html",
-      html: `<h1>Message from Protfolio !!!</h1><p>FROM: ${data.userEmail}</p><p>${data.message}</p>`,
+      html: `<h1>Message from Protfolio !!!</h1><p>From: ${data.userName}</p><p>Email: ${data.userEmail}</p><p>${data.message}</p><p>Phone: ${data.userPhone}</p>`,
     });
     return NextResponse.json({ success: true });
   } catch (error: any) {
