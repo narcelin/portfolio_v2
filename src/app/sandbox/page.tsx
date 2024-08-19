@@ -12,6 +12,12 @@ export default function sandbox() {
       >
         Education
       </MyButton>
+
+      <div className="flex flex-row gap-10">
+        <div className="border border-black px-10 py-3">Flex 1</div>
+        <div className="border border-black px-10 py-3">Flex 2</div>
+        <div className="border border-black px-10 py-3">Flex 3</div>
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function AboutSnippet() {
       />
       <div className="w-3/4 xl:w-full flex flex-col  gap-10">
         <MyHeader headerType={2}>Digital Journey</MyHeader>
-        <div className="text-shadow text-xl leading-">
+        <div className="text-shadow text-xl leading-3">
           I began my career as a civil engineer, earning a dual degree in
           engineering from Florida Gulf Coast University. Over the years, I held
           various project management positions across different construction
