@@ -92,7 +92,7 @@ export default function ContactMe() {
             Name
           </label>
           <input
-            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="text"
             id="name"
             value={`${usersName}`}
@@ -111,7 +111,7 @@ export default function ContactMe() {
             Email
           </label>
           <input
-            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="email"
             id="email"
             value={`${usersEmail}`}
@@ -130,7 +130,7 @@ export default function ContactMe() {
             Subject
           </label>
           <input
-            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="subject"
             id="subject"
             value={`${usersSubject}`}
@@ -149,7 +149,7 @@ export default function ContactMe() {
             Number (Not Required)
           </label>
           <input
-            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="tel"
             id="phoneNumber"
             value={`${usersPhoneNumber}`}
@@ -168,7 +168,7 @@ export default function ContactMe() {
             Message
           </label>
           <input
-            className="bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+            className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
             type="text"
             id="message"
             value={`${usersMessage}`}

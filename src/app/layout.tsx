@@ -24,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter_Tight.variable} font-sans md:w-4/5 mx-auto`}>
+      <body
+        className={`${inter_Tight.variable} p-4 font-sans md:w-4/5 mx-auto`}
+      >
         <Providers>
           {<NavigationBar />}
           {children}
