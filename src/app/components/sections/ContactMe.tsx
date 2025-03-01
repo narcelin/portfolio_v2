@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { Slide, toast } from "react-toastify";
+
 import MyButton from "../MyButton";
 
 export default function ContactMe() {
