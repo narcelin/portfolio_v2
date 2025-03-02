@@ -13,7 +13,7 @@ export default function Contact() {
       />
       {/* <ContactMe /> */}
       {/* <ReachMe className="container" /> */}
-      <EventCard />
+      <EventCard title="New Event Title" description="New Description" />
     </main>
   );
 }
