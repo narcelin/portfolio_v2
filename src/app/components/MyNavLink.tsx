@@ -37,6 +37,9 @@ export function NavLinks(classNames: string) {
       <li>
         <MyNavLink id="contact">Contact</MyNavLink>
       </li>
+      <li>
+        <MyNavLink id="myEvents">My Events</MyNavLink>
+      </li>
     </ul>
   );
 }
