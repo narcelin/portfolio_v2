@@ -1,0 +1,24 @@
+{
+  "title": "Thirtieth Birthday",
+  "date": "YYYY-MM-DD",
+  "location": {
+    "venue": "",
+    "address": "",
+    "city": "",
+    "state": "",
+    "zip": ""
+  },
+  "guests": [
+    {
+      "name": "",
+      "rsvp": false
+    }
+  ],
+  "activities": [
+    {
+      "time": "HH:MM",
+      "description": ""
+    }
+  ],
+  "notes": ""
+}

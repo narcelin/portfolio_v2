@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function MyButton({
+  className,
   children,
   fancy,
   withArrow,
@@ -12,6 +13,7 @@ export default function MyButton({
   justArrow,
   onClick,
 }: {
+  className?: string;
   children?: string;
   fancy?: boolean;
   withArrow?: boolean;
@@ -56,7 +58,7 @@ export default function MyButton({
   return (
     <button
       onClick={() => onClickHandler()}
-      className={`flex flex-row gap-2 ${buttonClass}`}
+      className={`flex flex-row gap-2 ${buttonClass} ${className}`}
     >
       <div>{children}</div>
       {withArrow ? <FaArrowRightLong size={15} /> : null}

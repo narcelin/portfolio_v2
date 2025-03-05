@@ -33,7 +33,7 @@ export function MyNavLink({
 }
 
 export default function HeroSection({
-  id,
+  id, // Will be used for the href in the MyNavLink
   imageSrc,
   imgAlt,
   title,
@@ -55,6 +55,7 @@ export default function HeroSection({
           alignItems: "center",
           border: "1px solid white",
           width: "60vw",
+          padding: "1rem",
         }}
       >
         <div style={{ flex: 1 }}>
