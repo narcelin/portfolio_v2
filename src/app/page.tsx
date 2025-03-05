@@ -10,7 +10,6 @@ import { Slide, toast } from "react-toastify";
 import { useEffect } from "react";
 
 export default function Home() {
-  const hasShownBefore = localStorage.getItem("constructionAlertShown");
   useEffect(() => {
     const underConstructionAlert = () => {
       toast.warning("Under Construction", {
