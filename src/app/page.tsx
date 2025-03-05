@@ -10,11 +10,12 @@ import { Slide, toast } from "react-toastify";
 import { useEffect } from "react";
 
 export default function Home() {
+  const hasShownBefore = localStorage.getItem("constructionAlertShown");
   useEffect(() => {
     const underConstructionAlert = () => {
       toast.warning("Under Construction", {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 800,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
@@ -23,9 +24,11 @@ export default function Home() {
         theme: "light",
         transition: Slide,
       });
+      localStorage.setItem("constructionAlertShown", "true");
     };
+    console.log("HAS SHOWN BEFORE LOCAL STORAGE", hasShownBefore);
     underConstructionAlert();
-  }, []);
+  }, [hasShownBefore]);
 
   return (
     <main>

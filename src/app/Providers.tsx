@@ -1,6 +1,6 @@
 "use client";
 
-import "react-toastify/ReactToastify.min.css";
+import "react-toastify/ReactToastify.css";
 // import "./app/globals.css";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "next-themes";
