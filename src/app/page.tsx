@@ -24,11 +24,9 @@ export default function Home() {
         theme: "light",
         transition: Slide,
       });
-      localStorage.setItem("constructionAlertShown", "true");
     };
-    console.log("HAS SHOWN BEFORE LOCAL STORAGE", hasShownBefore);
     underConstructionAlert();
-  }, [hasShownBefore]);
+  }, []);
 
   return (
     <main>
