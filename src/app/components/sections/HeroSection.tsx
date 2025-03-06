@@ -22,7 +22,7 @@ export default function HeroSection() {
         classNames="md:flex"
         source="/assets/imgs/img1.jpg"
         alternateTxt="picture of me"
-        size={1000}
+        size={100}
       />
       <div className="md:w-3/4 xl:w-full flex flex-col gap-10">
         <MySocials />

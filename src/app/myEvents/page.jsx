@@ -8,6 +8,7 @@ export default function MyEvents() {
         heading="My Events"
         subHeading="Any Issues? Contact me directly at narcelin.events@gmail.com"
       />
+      {/* Eventually will need to pull EventCard data from database */}
       <EventCard
         id="myEvent"
         title="The Spain Trip"

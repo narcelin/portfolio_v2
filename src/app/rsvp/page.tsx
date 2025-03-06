@@ -62,7 +62,7 @@ export default function Rsvp() {
             headerType={4}
             className="text-center border border-transparent"
           >
-            30th BDay
+            The Spain Trip
           </MyHeader>
         </div>
         {/* Name Input */}
