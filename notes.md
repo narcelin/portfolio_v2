@@ -8,7 +8,8 @@ Goal is to create a page where I can list personal events and have a system inwh
 Currently would like to create a page for my 30th birthday party
 Requirements:
 
-- RSVP
+- RSVP - need to add url params so that RSVP URL is linked to the correct event
+- TEMP RSVP PAGE CREATED. Eventually will need to like that page with different events and link the events page with my supabase for different events
 - Check Status. AKA have they been accepted?
 - Ability to edit ones RSVP
 - RSVP should have a group function to allow users to group with other users. The group should have a "leader" in which I could easily contact about group requirements
@@ -53,3 +54,22 @@ Toastify parameters [https://fkhadra.github.io/react-toastify/introduction/]
 (https://www.davegray.codes/posts/light-dark-mode-nextjs-app-router-tailwind)
 
 Create dynamic themes (https://www.youtube.com/watch?v=vIBKSmWAdIA). Beware of Nextjs and localStorage
+
+## Supabase Client
+
+example data insert
+
+const insertDataToSupabase = async () => {
+const supabaseClient = supabase;
+const { data, error } = await supabaseClient
+.from("user_rsvp")
+.insert({
+event_id: usersEventID,
+name: usersName,
+email: usersEmail,
+phone_number: usersPhoneNumber,
+notes: userNotes,
+})
+.select();
+return { data, error };
+};

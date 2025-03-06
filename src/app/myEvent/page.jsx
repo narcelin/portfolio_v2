@@ -7,7 +7,7 @@ export default function MyEvent() {
   console.log(ThirtiethBirthday);
   return (
     <main className="flex flex-col items-center py-14 gap-10">
-      <PageHeading heading="My Event" />
+      <PageHeading heading="That Spain Trip Im Always Talking About" />
       <div className="flex justify-between w-full max-w-4xl gap-10">
         <div className="flex flex-col space-y-5 w-1/2">
           <div>LOCATION: Los Caños De Meca, Spain</div>

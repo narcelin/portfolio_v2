@@ -26,23 +26,25 @@ export default function Rsvp() {
 
   const insertDataToSupabase = async () => {
     const supabaseClient = supabase;
-    const { data, error } = await supabaseClient
-      .from("user_rsvp")
-      .insert({
-        event_id: usersEventID,
-        name: usersName,
-        email: usersEmail,
-        phone_number: usersPhoneNumber,
-        notes: userNotes,
-      })
-      .select();
-    return { data, error };
+    const { error, status } = await supabaseClient.from("user_rsvp").insert({
+      event_id: usersEventID,
+      nasme: usersName,
+      email: usersEmail,
+      phone_number: usersPhoneNumber,
+      notes: userNotes,
+    });
+
+    if (error) {
+      console.log("Supabase ERROR: ", error);
+    }
+
+    return status;
   };
 
   // Handle Submit for Input Form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(await insertDataToSupabase());
+    await insertDataToSupabase();
 
     console.log(
       "USERS INFO: ",
