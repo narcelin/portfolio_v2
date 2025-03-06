@@ -45,6 +45,10 @@ Breakpoints:
 
 Need to start using "Container" class!!!
 
+### Center inside parent div
+
+flex items-center justify-center
+
 ## Alerts React-Toastify
 
 Toastify parameters [https://fkhadra.github.io/react-toastify/introduction/]

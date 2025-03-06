@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import MyButton from "../components/MyButton";
+import MyHeader from "../components/MyHeader";
 
 import { supabase } from "../utils/database/supabase";
 
@@ -15,7 +16,7 @@ export default function Rsvp() {
 
   // Set user values to zero
   const resetUserValues = () => {
-    setUsersEventID("");
+    setUsersEventID("30th Birthday");
     setUsersName("");
     setUsersEmail("");
     setUsersPhoneNumber("");
@@ -28,7 +29,7 @@ export default function Rsvp() {
     const supabaseClient = supabase;
     const { error, status } = await supabaseClient.from("user_rsvp").insert({
       event_id: usersEventID,
-      nasme: usersName,
+      name: usersName,
       email: usersEmail,
       phone_number: usersPhoneNumber,
       notes: userNotes,
@@ -46,14 +47,6 @@ export default function Rsvp() {
     e.preventDefault();
     await insertDataToSupabase();
 
-    console.log(
-      "USERS INFO: ",
-      usersEventID,
-      usersName,
-      usersEmail,
-      usersPhoneNumber,
-      userNotes
-    );
     // resetUserValues();
   };
 
@@ -63,8 +56,17 @@ export default function Rsvp() {
         className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3"
         onSubmit={handleSubmit}
       >
-        <div className="col-span-2 col-start-2">
-          {/* Name Input */}
+        {/* Event Name */}
+        <div className="col-span-2 col-start-1 flex items-center justify-center">
+          <MyHeader
+            headerType={4}
+            className="text-center border border-transparent"
+          >
+            30th BDay
+          </MyHeader>
+        </div>
+        {/* Name Input */}
+        <div className="col-span-2 col-start-3">
           <div className="mb-6">
             <label
               className="text-heading block text-sm font-medium mb-2"
@@ -83,8 +85,8 @@ export default function Rsvp() {
             />
           </div>
         </div>
+        {/* Number Input */}
         <div className="col-span-2 row-start-2">
-          {/* Number Input */}
           <div className="mb-6">
             <label
               className="text-heading block text-sm font-medium mb-2"
@@ -103,8 +105,8 @@ export default function Rsvp() {
             />
           </div>
         </div>
+        {/* Email Input */}
         <div className="col-span-2 row-start-2">
-          {/* Email Input */}
           <div className="mb-6">
             <label
               className="text-heading block text-sm font-medium mb-2"
@@ -123,8 +125,8 @@ export default function Rsvp() {
             />
           </div>
         </div>
+        {/* Notes Input */}
         <div className="col-span-4 row-start-3">
-          {/* Notes Input */}
           <div className="mb-6">
             <label
               className="text-heading block text-sm font-medium mb-2"
