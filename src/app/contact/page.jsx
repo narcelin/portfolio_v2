@@ -8,7 +8,7 @@ export default function Contact() {
     <main className="flex flex-col items-center py-14 gap-10">
       <PageHeading
         heading="OUT OF ORDER"
-        subHeading="Contact me directly at arcelin.nicolas@gmail.com"
+        subHeading="Contact me directly at narcelin.events@gmail.com"
         // heading="Contact"
         // subHeading="Let's Connect and Create Something Amazing Together: Reach Out to Start a Conversation About Your Project or Idea Today!"
       />

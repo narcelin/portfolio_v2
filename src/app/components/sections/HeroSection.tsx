@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import MySocials from "../MySocials";
+
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
@@ -23,7 +25,8 @@ export default function HeroSection() {
         size={1000}
       />
       <div className="md:w-3/4 xl:w-full flex flex-col gap-10">
-        <div className="flex flex-row gap-10">
+        <MySocials />
+        {/* <div className="flex flex-row gap-10">
           <a href="https://github.com/narcelin" target="_blank">
             <FaGithub size={20} />
           </a>
@@ -33,7 +36,8 @@ export default function HeroSection() {
           <FaFacebook size={20} />
           <FaInstagram size={20} />
           <FaTwitter size={20} />
-        </div>
+        </div> */}
+
         {/* Issue will arise when dynamically adding mobile views */}
         <div>
           <MyHeader headerType={1}>👋 Hey there,</MyHeader>

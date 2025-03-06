@@ -11,7 +11,7 @@ export default function PageHeading({
   subHeading: string;
 }) {
   return (
-    <div className="flex flex-col md:w-1/2 justify-center items-center">
+    <div className="flex flex-col md:w-2/3 justify-center items-center">
       <MyHeader
         headerType={4}
         className="text-center border border-transparent border-b-shadow w-1/2"

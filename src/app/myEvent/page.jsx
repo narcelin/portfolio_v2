@@ -1,5 +1,6 @@
 "use client";
 import PageHeading from "../components/PageHeading";
+import MyHeader from "../components/MyHeader";
 import ThirtiethBirthday from "../components/hardCoded/ThirtiethBirthday.json";
 import MyButton from "../components/MyButton";
 
@@ -7,7 +8,9 @@ export default function MyEvent() {
   console.log(ThirtiethBirthday);
   return (
     <main className="flex flex-col items-center py-14 gap-10">
-      <PageHeading heading="That Spain Trip Im Always Talking About" />
+      <MyHeader className="flex items-center justify-center" headerType={4}>
+        That Trip To Spain
+      </MyHeader>
       <div className="flex justify-between w-full max-w-4xl gap-10">
         <div className="flex flex-col space-y-5 w-1/2">
           <div>LOCATION: Los Caños De Meca, Spain</div>
