@@ -32,7 +32,7 @@ export default function Home() {
       <HeroSection />
       <AboutSnippet />
       <Showcase />
-      <ReachMe />
+      {/* <ReachMe /> */}
     </main>
   );
 }
