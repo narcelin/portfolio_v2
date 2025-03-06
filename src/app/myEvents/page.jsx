@@ -9,9 +9,10 @@ export default function MyEvents() {
         subHeading="Any Issues? Contact me directly at narcelin.events@gmail.com"
       />
       <EventCard
-        title="New Event Title"
-        description="New Description"
         id="myEvent"
+        title="The Spain Trip"
+        description="Join me in Spain for my 30th birthday!"
+        date="Summer 2026"
       />
     </main>
   );

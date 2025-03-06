@@ -48,17 +48,9 @@ export default function HeroSection({
   date?: string;
 }) {
   return (
-    <MyNavLink id={id ? id : "sandbox"}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          border: "1px solid white",
-          width: "60vw",
-          padding: "1rem",
-        }}
-      >
-        <div style={{ flex: 1 }}>
+    <MyNavLink id={id ? id : "error"}>
+      <div className="flex flex-col md:flex-row items-center border border-white w-full md:w-[60vw] p-4">
+        <div className="flex-1 mb-4 md:mb-0">
           <Image
             src={imageSrc ? imageSrc : "/assets/imgs/img1.jpg"}
             alt={imgAlt ? imgAlt : "Event Image"}
@@ -66,11 +58,11 @@ export default function HeroSection({
             height={100}
           />
         </div>
-        <div style={{ flex: 2, textAlign: "center" }}>
-          <MyHeader headerType={3}>{title ? title : "Event Title"}</MyHeader>
-          <div>{description ? description : "Event Description"}</div>
+        <div className="flex-2 text-center mb-4 md:mb-0">
+          <MyHeader headerType={3}>{title ? title : "MISSING TITLE"}</MyHeader>
+          <div>{description ? description : "MISSING DESCRIPTION"}</div>
         </div>
-        <div style={{ flex: 1, textAlign: "right" }}>
+        <div className="flex-1 text-right">
           <div>{date ? date : "Event Date"}</div>
         </div>
       </div>

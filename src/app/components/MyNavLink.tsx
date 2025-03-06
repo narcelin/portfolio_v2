@@ -35,10 +35,10 @@ export function NavLinks(classNames: string) {
         <MyNavLink id="about">About</MyNavLink>
       </li> */}
       <li>
-        <MyNavLink id="contact">Contact</MyNavLink>
+        <MyNavLink id="myEvents">My Events</MyNavLink>
       </li>
       <li>
-        <MyNavLink id="myEvents">My Events</MyNavLink>
+        <MyNavLink id="contact">Contact</MyNavLink>
       </li>
     </ul>
   );

@@ -14,7 +14,7 @@ export default function Home() {
     const underConstructionAlert = () => {
       toast.warning("Under Construction", {
         position: "top-right",
-        autoClose: 800,
+        autoClose: 1250,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
