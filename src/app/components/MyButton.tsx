@@ -12,6 +12,7 @@ export default function MyButton({
   suttle,
   justArrow,
   onClick,
+  onSubmit,
 }: {
   className?: string;
   children?: string;
@@ -20,6 +21,7 @@ export default function MyButton({
   suttle?: boolean;
   justArrow?: boolean;
   onClick: Function;
+  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
 }) {
   const onClickHandler = () => {
     // toast.success("Button Clicked!", {

@@ -4,24 +4,63 @@ import { useState } from "react";
 
 import MyButton from "../components/MyButton";
 
+import { supabase } from "../utils/database/supabase";
+
 export default function Rsvp() {
-  const initValues = {
-    name: "",
-    email: "",
-    phoneNumber: "",
-    notes: "",
+  const [usersEventID, setUsersEventID] = useState("30th Birthday");
+  const [usersName, setUsersName] = useState("");
+  const [usersEmail, setUsersEmail] = useState("");
+  const [usersPhoneNumber, setUsersPhoneNumber] = useState("");
+  const [userNotes, setUserNotes] = useState("");
+
+  // Set user values to zero
+  const resetUserValues = () => {
+    setUsersEventID("");
+    setUsersName("");
+    setUsersEmail("");
+    setUsersPhoneNumber("");
+    setUserNotes("");
   };
 
-  const [usersName, setUsersName] = useState(initValues.name);
-  const [usersEmail, setUsersEmail] = useState(initValues.email);
-  const [usersPhoneNumber, setUsersPhoneNumber] = useState(
-    initValues.phoneNumber
-  );
-  const [userNotes, setUserNotes] = useState(initValues.notes);
+  // Supabase Client Connection
+
+  const insertDataToSupabase = async () => {
+    const supabaseClient = supabase;
+    const { data, error } = await supabaseClient
+      .from("user_rsvp")
+      .insert({
+        event_id: usersEventID,
+        name: usersName,
+        email: usersEmail,
+        phone_number: usersPhoneNumber,
+        notes: userNotes,
+      })
+      .select();
+    return { data, error };
+  };
+
+  // Handle Submit for Input Form
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(await insertDataToSupabase());
+
+    console.log(
+      "USERS INFO: ",
+      usersEventID,
+      usersName,
+      usersEmail,
+      usersPhoneNumber,
+      userNotes
+    );
+    // resetUserValues();
+  };
 
   return (
     <main className="flex flex-col items-center py-14 gap-10">
-      <form className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3">
+      <form
+        className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3"
+        onSubmit={handleSubmit}
+      >
         <div className="col-span-2 col-start-2">
           {/* Name Input */}
           <div className="mb-6">
@@ -102,11 +141,7 @@ export default function Rsvp() {
             />
           </div>
         </div>
-        <MyButton
-          className="col-span-4"
-          onClick={() => console.log("SEND")}
-          fancy
-        >
+        <MyButton className="col-span-4" onClick={() => handleSubmit} fancy>
           RSVP
         </MyButton>
       </form>
