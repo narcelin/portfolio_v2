@@ -12,7 +12,7 @@ export default function MyEvents() {
       <EventCard
         id="myEvent"
         title="The Spain Trip"
-        description="Join me in Spain for my 30th birthday!"
+        description="Join me in Spain for my 30th"
         date="Summer 2026"
       />
     </main>

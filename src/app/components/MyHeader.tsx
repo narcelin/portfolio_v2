@@ -11,13 +11,13 @@ export default function MyHeader({
 
   switch (headerType) {
     case 1:
-      headerTypeClasses = "text-6xl font-semibold leadingIssue!!!";
+      headerTypeClasses = "text-6xl text-accent font-semibold leadingIssue!!!";
       break;
     case 2:
-      headerTypeClasses = "text-5xl font-semibold leading-tight";
+      headerTypeClasses = "text-5xl text-accent font-semibold leading-tight";
       break;
     case 3:
-      headerTypeClasses = "text-2xl font-semibold";
+      headerTypeClasses = "text-2xl text-accent font-semibold";
       break;
     case 4:
       headerTypeClasses =

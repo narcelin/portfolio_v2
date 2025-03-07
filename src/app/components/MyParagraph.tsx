@@ -5,5 +5,5 @@ export default function MyParagraph({
   children: string;
   className?: string;
 }) {
-  return <div className={`${className} text-shadow`}>{children}</div>;
+  return <div className={`${className} text-accent`}>{children}</div>;
 }
