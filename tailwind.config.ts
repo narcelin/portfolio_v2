@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
-const plugin = require('tailwindcss/plugin')
+// import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
+  important: true,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,7 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       //ISSUE WITH TAILWIN FONT
-      // fontFamily: { 
+      // fontFamily: {
       //   sans: ['var(--font-interTight']
       // },
       colors: {

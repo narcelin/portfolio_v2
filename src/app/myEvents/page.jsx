@@ -1,5 +1,5 @@
 import EventCard from "../components/sections/EventCard";
-import PageHeading from "../components/PageHeading"; //Honestly can probably get rid of this? Or change it
+import PageHeading from "../components/sections/PageHeading"; //Honestly can probably get rid of this? Or change it
 
 export default function MyEvents() {
   return (

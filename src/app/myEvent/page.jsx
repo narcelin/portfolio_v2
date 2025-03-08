@@ -1,5 +1,5 @@
 "use client";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/sections/PageHeading";
 import MyHeader from "../components/MyHeader";
 import ThirtiethBirthday from "../components/hardCoded/ThirtiethBirthday.json";
 import MyButton from "../components/MyButton";

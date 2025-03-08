@@ -6,7 +6,7 @@ import ReachMe from "../components/sections/ReachMe";
 import MyHeader from "../components/MyHeader";
 import MyParagraph from "../components/MyParagraph";
 import MySimpleCard from "../components/MySimpleCard";
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/sections/PageHeading";
 
 export default function About() {
   return (

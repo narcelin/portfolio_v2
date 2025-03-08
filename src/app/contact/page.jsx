@@ -1,7 +1,7 @@
 import ReachMe from "../components/sections/ReachMe";
 import ContactMe from "../components/sections/ContactMe";
 
-import PageHeading from "../components/PageHeading";
+import PageHeading from "../components/sections/PageHeading";
 
 export default function Contact() {
   return (

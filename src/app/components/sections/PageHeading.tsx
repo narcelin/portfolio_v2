@@ -1,5 +1,5 @@
-import MyHeader from "./MyHeader";
-import MyParagraph from "./MyParagraph";
+import MyHeader from "../MyHeader";
+import MyParagraph from "../MyParagraph";
 
 //Inconsistent Component!!!
 

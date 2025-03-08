@@ -10,6 +10,7 @@ import { Slide, toast } from "react-toastify";
 import { useEffect } from "react";
 
 export default function Home() {
+  // Toadtify Alert for Under Construction
   useEffect(() => {
     const underConstructionAlert = () => {
       toast.warning("Under Construction", {
