@@ -5,6 +5,7 @@ import MySocials from "../MySocials";
 import MyImageContainer from "../MyImageContainer";
 import MyHeader from "../MyHeader";
 import MyButton from "../MyButton";
+import MyText from "../MyText";
 
 export default function HeroSection() {
   return (
@@ -18,16 +19,15 @@ export default function HeroSection() {
       />
       <div className="md:w-3/4 xl:w-full flex flex-col gap-10">
         <MySocials />
-
         {/* Issue will arise when dynamically adding mobile views */}
         <div>
           <MyHeader headerType={1}>👋 Hey there,</MyHeader>
           <MyHeader headerType={1}>It&apos;s Nicolas Arcelin.</MyHeader>
         </div>
-        <p className="text-shadow text-xl">
+        <MyText className="text-xl" isSubtle>
           Welcome to my corner of the web. Please feel free to contact me at any
           time.
-        </p>
+        </MyText>
         <div className="flex flex-row justify-center gap-10">
           <MyButton
             onClick={() => window.open("/contact", "_self")}
