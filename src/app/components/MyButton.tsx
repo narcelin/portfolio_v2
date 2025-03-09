@@ -65,7 +65,9 @@ export default function MyButton({
       className={`flex flex-row gap-2 ${buttonClass} ${className}`}
     >
       <MyText>{children}</MyText>
-      {withArrow ? <FaArrowRightLong size={15} /> : null}
+      {withArrow ? (
+        <FaArrowRightLong size={15} className="text-black dark:text-accent" />
+      ) : null}
     </button>
   );
 }
