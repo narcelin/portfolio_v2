@@ -1,15 +1,25 @@
 import React from "react";
 
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 
-export default function MyText() {
+export default function MyText({
+  className,
+  children,
+  isSubtle,
+}: {
+  className?: string;
+  children?: string;
+  isSubtle?: boolean;
+}) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  const { setTheme, resolvedTheme } = useTheme();
-
   if (!mounted) return <div>Loading...</div>;
 
-  return <div>MyText</div>;
+  const textStyle = `${
+    isSubtle ? "text-shadow" : "text-black dark:text-accent"
+  } 
+  font-semibold`;
+
+  return <div className={`${className} ${textStyle}`}>{children}</div>;
 }

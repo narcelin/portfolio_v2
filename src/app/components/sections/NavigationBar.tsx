@@ -9,6 +9,7 @@ import MyNavLink from "../MyNavLink";
 import MyThemeSwitch from "../MyThemeSwitch";
 
 import { NavLinks } from "../MyNavLink";
+import MyText from "../MyText";
 
 export default function NavigationBar() {
   const [mobileNavMenu, setMobileNavMenu] = useState(false);
@@ -31,9 +32,9 @@ export default function NavigationBar() {
   return (
     <section className="border border-transparent border-b-shadow">
       <div className="flex flex-row justify-between h-20 items-center">
-        <div className="flex flex-row font-semibold text-2xl">
-          <div className="text-[#303030]">Nicolas&nbsp;</div>
-          <div className="text-[#909090]">Arcelin</div>
+        <div className="flex flex-row text-2xl">
+          <MyText>Nicolas&nbsp;</MyText>
+          <MyText isSubtle>Arcelin</MyText>
         </div>
         {NavLinks("hidden md:flex flex-row gap-4")}
         <button

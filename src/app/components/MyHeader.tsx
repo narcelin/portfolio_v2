@@ -1,3 +1,5 @@
+import MyText from "./MyText";
+
 export default function MyHeader({
   children,
   className,
@@ -27,5 +29,9 @@ export default function MyHeader({
       break;
   }
 
-  return <h1 className={`${headerTypeClasses} ${className}`}>{children}</h1>;
+  return (
+    <h1 className={`${headerTypeClasses} ${className}`}>
+      <MyText>{children}</MyText>
+    </h1>
+  );
 }

@@ -3,6 +3,7 @@
 import { supabase } from "../utils/database/supabase";
 
 import MyButton from "../components/MyButton";
+import MyText from "../components/MyText";
 import MyThemeSwitch from "../components/MyThemeSwitch";
 
 export default function sandbox() {
@@ -14,7 +15,8 @@ export default function sandbox() {
 
   return (
     <div className="w-full h-screen flex flex-row justify-center items-center">
-      <MyThemeSwitch />
+      <MyText isSubtle={true}>TEST TEXT</MyText>
+      {/* <MyThemeSwitch /> */}
     </div>
   );
 }
