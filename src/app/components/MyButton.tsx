@@ -31,19 +31,19 @@ export default function MyButton({
     onClick();
   };
 
-  //Just arrow button
+  //Just arrow button RETURN
   if (justArrow) {
     return (
       <button
         onClick={() => onClickHandler()}
-        className="text-[#303030] border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center"
+        className="text-black dark:text-accent border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center"
       >
         <FaArrowRightLong size={15} />
       </button>
     );
   }
 
-  //Subtle button
+  //Subtle button RETURN
   if (subtle) {
     //Need to add selected page CSS dynamic classes
     return (
@@ -58,6 +58,7 @@ export default function MyButton({
     ? "text-white bg-my-gradient90 rounded-full px-5 h-12 flex flex-row justify-center items-center"
     : "border border-[#757575] rounded-full px-5 h-12 flex flex-row justify-center items-center";
 
+  //Basic Button RETURN
   return (
     <button
       onClick={() => onClickHandler()}
