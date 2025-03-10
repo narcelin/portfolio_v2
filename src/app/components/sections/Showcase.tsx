@@ -6,9 +6,10 @@ import MyImageContainer from "../MyImageContainer";
 
 export default function Showcase() {
   return (
-    <section className="py-10 flex flex-col gap-10 items-center">
+    <section className="p-10 flex flex-col gap-10 items-center border border-black dark:border-accent">
       <MyHeader headerType={3}>Explore My Latest Works</MyHeader>
-      <div className="flex flex-col md:flex-row items-center gap-10 w-full xl:w-2/3">
+      <div className="flex flex-col md:flex-row items-center gap-10 w-full ">
+        {/* Portfolio */}
         <div className="w-full md:w-1/2">
           <MyImageContainer
             classNames="flex flex-row justify-center items-center h-60"
@@ -34,6 +35,7 @@ export default function Showcase() {
             />
           </div>
         </div>
+        {/* C++ Data Structures */}
         <div className="w-full md:w-1/2">
           <MyImageContainer
             classNames="flex flex-row justify-center items-center h-60"
@@ -60,6 +62,7 @@ export default function Showcase() {
           </div>
         </div>
       </div>
+      {/* Commerce Website REACT */}
       <div className="w-full xl:w-2/3">
         <MyImageContainer
           classNames="text-6xl flex flex-row justify-center items-center"
@@ -85,11 +88,7 @@ export default function Showcase() {
           />
         </div>
       </div>
-      <div className="w-full flex flex-row justify-center">
-        {/* <MyButton onClick={() => console.log("Clicked")}>
-          Let&apos;s See More
-        </MyButton> */}
-      </div>
+      <div className="w-full flex flex-row justify-center"></div>
     </section>
   );
 }
