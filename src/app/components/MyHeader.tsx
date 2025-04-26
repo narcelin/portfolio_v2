@@ -23,7 +23,7 @@ export default function MyHeader({
       break;
     case 4:
       headerTypeClasses =
-        "text-5xl font-semibold !bg-my-gradient90  dark:!text-transparent !bg-clip-text";
+        "!text-5xl !font-semibold !bg-my-gradient90  dark:!text-transparent !bg-clip-text";
       break;
     default:
       break;

@@ -21,12 +21,14 @@ Requirements:
 
 ' = &apos;
 
-## Icons
+## CSS
+
+### Icons
 
 Style fa6
 ICONS [https://react-icons.github.io/react-icons/search/#q=fagithub]
 
-## TailwindCSS
+### TailwindCSS
 
 https://www.youtube.com/watch?v=guh9qzxkb1o -> setting class name variables 4:44
 example:
@@ -46,6 +48,18 @@ Breakpoints:
 Need to start using "Container" class!!!
 
 ### Center inside parent div
+
+### CLSX Class Combinator
+
+```tsx
+import clsx from "clsx";
+
+const myClass = clsx(
+  "text-2xl font-bold",
+  isSubtle && "text-gray-500",
+  isImportant ? "text-red-500" : "text-green-500"
+);
+```
 
 flex items-center justify-center
 

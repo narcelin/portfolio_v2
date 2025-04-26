@@ -34,19 +34,22 @@ export default function Rsvp() {
       phone_number: usersPhoneNumber,
       notes: userNotes,
     });
+    console.log(error);
 
     if (error) {
       console.log("Supabase ERROR: ", error);
     }
 
-    return status;
+    return error;
   };
 
   // Handle Submit for Input Form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await insertDataToSupabase();
-
+    const error = await insertDataToSupabase();
+    if (!error) {
+      resetUserValues();
+    }
     // resetUserValues();
   };
 

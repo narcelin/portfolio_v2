@@ -1,3 +1,5 @@
+import MyText from "./MyText";
+
 export default function MyParagraph({
   children,
   className,
@@ -5,5 +7,5 @@ export default function MyParagraph({
   children: string;
   className?: string;
 }) {
-  return <div className={`${className} text-accent`}>{children}</div>;
+  return <MyText className={`${className} text-accent `}>{children}</MyText>;
 }
