@@ -1,12 +1,12 @@
 "use client";
-import PageHeading from "../components/sections/PageHeading";
-import MyHeader from "../components/MyHeader";
-import ThirtiethBirthday from "../components/hardCoded/ThirtiethBirthday.json";
-import MyButton from "../components/MyButton";
-import MyParagraph from "../components/MyParagraph";
+import PageHeading from "../../components/sections/PageHeading";
+import MyHeader from "../../components/MyHeader";
+import ThirtiethBirthday from "../../components/hardCoded/ThirtiethBirthday.json";
+import MyButton from "../../components/MyButton";
+import MyParagraph from "../../components/MyParagraph";
 
 import Image from "next/image";
-import MyImageContainer from "../components/MyImageContainer";
+import MyImageContainer from "../../components/MyImageContainer";
 
 export default function MyEvent() {
   console.log(ThirtiethBirthday);
@@ -64,7 +64,7 @@ export default function MyEvent() {
 
           <MyButton
             className="w-full"
-            onClick={() => window.open("/rsvp", "_blank")}
+            onClick={() => window.open("myEvent/rsvp", "_blank")}
             fancy
             withArrow
           >

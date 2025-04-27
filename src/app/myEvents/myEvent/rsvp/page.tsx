@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import MyButton from "../components/MyButton";
-import MyHeader from "../components/MyHeader";
+import MyButton from "@/app/components/MyButton";
+import MyHeader from "@/app/components/MyHeader";
 
-import { supabase } from "../utils/database/supabase";
+import { supabase } from "@/app/utils/database/supabase";
 
 export default function Rsvp() {
   const [usersEventID, setUsersEventID] = useState("30th Birthday");
@@ -78,7 +78,7 @@ export default function Rsvp() {
               Name
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="text"
               id="name"
               value={`${usersName}`}
@@ -98,7 +98,7 @@ export default function Rsvp() {
               Number
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="tel"
               id="phoneNumber"
               value={`${usersPhoneNumber}`}
@@ -118,7 +118,7 @@ export default function Rsvp() {
               Email
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="email"
               id="email"
               value={`${usersEmail}`}
@@ -138,7 +138,7 @@ export default function Rsvp() {
               Notes
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5"
+              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="subject"
               id="subject"
               value={`${userNotes}`}
