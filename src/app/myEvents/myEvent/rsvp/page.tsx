@@ -28,7 +28,7 @@ export default function Rsvp() {
   const toastifyNotification = (status: string, message: string) => {
     if (status === "error") {
       toast.error(message, {
-        position: "top-right",
+        position: "bottom-center",
         autoClose: 1750,
         hideProgressBar: true,
         closeOnClick: true,
@@ -41,7 +41,7 @@ export default function Rsvp() {
     }
     if (status === "success") {
       toast.success(message, {
-        position: "top-right",
+        position: "bottom-center",
         autoClose: 1750,
         hideProgressBar: true,
         closeOnClick: true,
