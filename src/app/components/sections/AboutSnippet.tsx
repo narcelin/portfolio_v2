@@ -48,9 +48,9 @@ export default function AboutSnippet() {
           >
             Let&apos;s Talk
           </MyButton>
-          <MyButton onClick={() => window.open("/about", "_self")}>
+          {/* <MyButton onClick={() => window.open("/about", "_self")}>
             See More
-          </MyButton>
+          </MyButton> */}
         </div>
       </div>
     </section>
