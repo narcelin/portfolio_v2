@@ -1,5 +1,11 @@
 # Dev notes
 
+## ISSUES
+
+### Vercel deploying old production branch
+
+- I completely broke vercel
+
 ## TO DO
 
 ### myEvents Page
