@@ -5,6 +5,8 @@
 ### Vercel deploying old production branch
 
 - I completely broke vercel
+  - I created a new vercel project and linked it to main. Currently seems to have soled my issue.
+  - Will hold onto the old deployment for now
 
 ## TO DO
 
