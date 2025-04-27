@@ -50,7 +50,7 @@ export default function HeroSection({
 }) {
   return (
     <MyNavLink id={`myEvents/${id ? id : "error"}`}>
-      <div className="flex flex-col md:flex-row items-center border border-white w-full md:w-[60vw] p-4">
+      <div className="flex flex-col md:flex-row items-center border dark:border-white border-black w-full md:w-[60vw] p-4">
         <div className="flex-1 mb-4 md:mb-0">
           {/* <MyImageContainer
             // device="phone"

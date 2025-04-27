@@ -85,7 +85,7 @@ export default function Rsvp() {
     const error = await insertDataToSupabase();
     if (!error) {
       toastifyNotification("success", "RSVP Submitted");
-      // resetUserValues();
+      resetUserValues();
     }
     // resetUserValues();
   };
