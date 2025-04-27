@@ -37,7 +37,9 @@ export default function HeroSection() {
             Say Hello
           </MyButton>
           <MyButton
-            onClick={() => window.open("/assets/narcelin_CV2024.pdf", "_blank")}
+            onClick={() =>
+              window.open("/assets/narcelin_TR-CV2024.pdf", "_blank")
+            }
           >
             My CV
           </MyButton>

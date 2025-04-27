@@ -25,18 +25,33 @@ export default function Rsvp() {
     setUserNotes("");
   };
 
-  const toastifyNotification = (message: string) => {
-    toast.success(message, {
-      position: "top-right",
-      autoClose: 1750,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Slide,
-    });
+  const toastifyNotification = (status: string, message: string) => {
+    if (status === "error") {
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 1750,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+    }
+    if (status === "success") {
+      toast.success(message, {
+        position: "top-right",
+        autoClose: 1750,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+    }
   };
 
   // Supabase Client Connection/Insert Data
@@ -53,6 +68,12 @@ export default function Rsvp() {
 
     if (error) {
       console.log("Supabase ERROR: ", error);
+
+      if (error.code === "23505") {
+        toastifyNotification("error", "RSVP Already Exists");
+      } else {
+        toastifyNotification("error", "Error: RSVP Not Submitted");
+      }
     }
 
     return error;
@@ -63,8 +84,8 @@ export default function Rsvp() {
     e.preventDefault();
     const error = await insertDataToSupabase();
     if (!error) {
-      toastifyNotification("RSVP Submitted");
-      resetUserValues();
+      toastifyNotification("success", "RSVP Submitted");
+      // resetUserValues();
     }
     // resetUserValues();
   };
