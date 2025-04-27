@@ -5,9 +5,10 @@ import { useState, useEffect } from "react";
 import MyButton from "@/app/components/MyButton";
 import MyHeader from "@/app/components/MyHeader";
 
-import { Slide, toast } from "react-toastify";
+import { Slide, toast, ToastContainer } from "react-toastify";
 
 import { supabase } from "@/app/utils/database/supabase";
+import { CiSliderVertical } from "react-icons/ci";
 
 export default function Rsvp() {
   const [usersEventID, setUsersEventID] = useState("30th Birthday");
@@ -37,6 +38,7 @@ export default function Rsvp() {
         progress: undefined,
         theme: "light",
         transition: Slide,
+        className: "px-20",
       });
     }
     if (status === "success") {
@@ -50,9 +52,12 @@ export default function Rsvp() {
         progress: undefined,
         theme: "light",
         transition: Slide,
+        className: "px-20",
       });
     }
   };
+
+  <ToastContainer className="color-red" />;
 
   // Supabase Client Connection/Insert Data
   const insertDataToSupabase = async () => {
@@ -85,7 +90,7 @@ export default function Rsvp() {
     const error = await insertDataToSupabase();
     if (!error) {
       toastifyNotification("success", "RSVP Submitted");
-      resetUserValues();
+      // resetUserValues();
     }
     // resetUserValues();
   };
