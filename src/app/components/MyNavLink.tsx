@@ -31,12 +31,11 @@ export function NavLinks(classNames: string) {
         {/* Id is empty to represent / pathname to match home. May need to be change for consistency */}
         <MyNavLink id="">Home</MyNavLink>
       </li>
+      {/* Disconnected myEvents page for low security privacy */}
       {/* <li>
         <MyNavLink id="about">About</MyNavLink>
       </li> */}
-      <li>
-        <MyNavLink id="myEvents">My Events</MyNavLink>
-      </li>
+      <li>{/* <MyNavLink id="myEvents">My Events</MyNavLink> */}</li>
       <li>
         <MyNavLink id="contact">Contact</MyNavLink>
       </li>

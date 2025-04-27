@@ -4,9 +4,12 @@
 
 ### myEvents Page
 
-Goal is to create a page where I can list personal events and have a system inwhich users can easily RSVP to said event
+Goal: create a page where I can list personal events and have a system inwhich users can easily RSVP to said event
 Currently would like to create a page for my 30th birthday party
 Requirements:
+
+- Change CV to recruiters version
+- Add password for events page | TEMP FIX - dissconnect events page from navbar. Only accessible with link
 
 - RSVP - need to add url params so that RSVP URL is linked to the correct event
 - TEMP RSVP PAGE CREATED. Eventually will need to like that page with different events and link the events page with my supabase for different events
@@ -15,7 +18,6 @@ Requirements:
 - RSVP should have a group function to allow users to group with other users. The group should have a "leader" in which I could easily contact about group requirements
 
 - Git branch = page_myEvents
--
 
 ## HTML
 
@@ -33,17 +35,22 @@ ICONS [https://react-icons.github.io/react-icons/search/#q=fagithub]
 https://www.youtube.com/watch?v=guh9qzxkb1o -> setting class name variables 4:44
 example:
 
+```tsx
     const colorVariants = {
         blue: 'bg-blue-500 hover:bg-blue-500 etc etc'
         red: 'etc etc'
     }
 
-    <div className={`${colorVarient['blue']}}></div>
+    <div className={`${colorVarient['blue']}`}></div>
+```
 
 Breakpoints:
 
-    Can have a rang. Example:
-    className="md:max-xl:flex"
+Can have a rang. Example:
+
+```tsx
+className = "md:max-xl:flex";
+```
 
 Need to start using "Container" class!!!
 
@@ -77,17 +84,19 @@ Create dynamic themes (https://www.youtube.com/watch?v=vIBKSmWAdIA). Beware of N
 
 example data insert
 
+```tsx
 const insertDataToSupabase = async () => {
-const supabaseClient = supabase;
-const { data, error } = await supabaseClient
-.from("user_rsvp")
-.insert({
-event_id: usersEventID,
-name: usersName,
-email: usersEmail,
-phone_number: usersPhoneNumber,
-notes: userNotes,
-})
-.select();
-return { data, error };
+  const supabaseClient = supabase;
+  const { data, error } = await supabaseClient
+    .from("user_rsvp")
+    .insert({
+      event_id: usersEventID,
+      name: usersName,
+      email: usersEmail,
+      phone_number: usersPhoneNumber,
+      notes: userNotes,
+    })
+    .select();
+  return { data, error };
 };
+```
