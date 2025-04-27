@@ -35,9 +35,7 @@ export function NavLinks(classNames: string) {
       {/* <li>
         <MyNavLink id="about">About</MyNavLink>
       </li> */}
-      <li>
-        <MyNavLink id="myEvents">My Events</MyNavLink>
-      </li>
+      <li>{/* <MyNavLink id="myEvents">My Events</MyNavLink> */}</li>
       <li>
         <MyNavLink id="contact">Contact</MyNavLink>
       </li>
