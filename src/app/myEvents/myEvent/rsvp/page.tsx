@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import MyButton from "@/app/components/MyButton";
 import MyHeader from "@/app/components/MyHeader";
+
+import { Slide, toast } from "react-toastify";
 
 import { supabase } from "@/app/utils/database/supabase";
 
@@ -23,8 +25,21 @@ export default function Rsvp() {
     setUserNotes("");
   };
 
-  // Supabase Client Connection
+  const toastifyNotification = (message: string) => {
+    toast.success(message, {
+      position: "top-right",
+      autoClose: 1750,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Slide,
+    });
+  };
 
+  // Supabase Client Connection/Insert Data
   const insertDataToSupabase = async () => {
     const supabaseClient = supabase;
     const { error, status } = await supabaseClient.from("user_rsvp").insert({
@@ -34,7 +49,7 @@ export default function Rsvp() {
       phone_number: usersPhoneNumber,
       notes: userNotes,
     });
-    console.log(error);
+    console.log(status);
 
     if (error) {
       console.log("Supabase ERROR: ", error);
@@ -48,6 +63,7 @@ export default function Rsvp() {
     e.preventDefault();
     const error = await insertDataToSupabase();
     if (!error) {
+      toastifyNotification("RSVP Submitted");
       resetUserValues();
     }
     // resetUserValues();
