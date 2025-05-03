@@ -45,8 +45,6 @@ export default function MyEvent() {
               I&rsquo;ve been talking about this trip forever, and now
               it&rsquo;s finally in the works! I&rsquo;m planning to celebrate
               my 30th in Spain and would love to have all of you be apart of it.
-              Picture beaches, great company, and maybe even a quick ferry trip
-              to Morocco for the day!
               <br />
               <br />
               Right now, this is just a super preliminary headcount—nothing set
@@ -64,7 +62,7 @@ export default function MyEvent() {
 
           <MyButton
             className="w-full"
-            onClick={() => window.open("myEvent/rsvp", "_blank")}
+            onClick={() => window.open("myEvent/rsvp", "_self")}
             fancy
             withArrow
           >
