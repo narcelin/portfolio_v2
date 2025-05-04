@@ -6,7 +6,7 @@ export default function MyEvents() {
     <main className="flex flex-col items-center py-14 gap-10">
       <PageHeading
         heading="My Events"
-        subHeading="Any Issues? Contact me directly at narcelin.events@gmail.com"
+        subHeading="Any Issues? Contact me directly at anicodotdev@gmail.com"
       />
       {/* Eventually will need to pull EventCard data from database */}
       <EventCard
