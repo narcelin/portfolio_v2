@@ -63,7 +63,9 @@ export default function MyEvent() {
               below. More details to come as planning unfolds.
             </MyParagraph>
           </div>
-          <MyHeader headerType={4}>Summer 2026</MyHeader>
+          <MyHeader headerType={4} className="text-center">
+            Summer 2026
+          </MyHeader>
 
           <MyButton
             className="w-full"
