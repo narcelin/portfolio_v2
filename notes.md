@@ -108,3 +108,31 @@ const insertDataToSupabase = async () => {
   return { data, error };
 };
 ```
+
+## VSCODE
+
+### Useful Shortcuts
+
+- Open Keyboard Shortcuts (JSON) -- for personally created shortcuts
+
+#### Selection & Cursor
+
+- Multi Select (cmd + D)
+  - Once multiple selections, used (cmd + SHIFT + U) to tab through those options
+
+#### HTML Shortcuts
+
+- Selection Wrapper (cmd + SHIFT + A)
+  - This allows selection to be wrapped in <"INPUT TEXT">
+
+### Extensions
+
+- TODO Highlight: Improves code visibility
+  - Settings located on line 108 - User Settings Json
+  - This highlights key words like TODO: and FIXME:.
+  - I have also tied this in with console.log, console.warn, and console.error
+
+## Curiosity Questions
+
+- What is the difference between user settings, default settings, and workspace settings
+  - I assume my user settings are applied accross devces. AKA liked with my user. Default are linked with the computer and workspace linked with the file or workspace directly
