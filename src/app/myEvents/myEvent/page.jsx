@@ -9,16 +9,19 @@ import Image from "next/image";
 import MyImageContainer from "../../components/MyImageContainer";
 
 export default function MyEvent() {
-  console.log(ThirtiethBirthday);
+  // console.log(ThirtiethBirthday);
   return (
     <main className="flex flex-col items-center py-14 gap-10">
       {/* <div className="flex flex-col md:flex-row items-center border border-white w-full md:w-[60vw] p-4"></div> */}
 
-      <MyHeader className="flex items-center justify-center" headerType={4}>
+      <MyHeader
+        className="flex items-center justify-center text-center"
+        headerType={4}
+      >
         That Trip To Spain
       </MyHeader>
-      <div className="flex flex-col md:flex-row justify-between items-center md:justify-center w-full max-w-4xl gap-10">
-        <div className="flex flex-col space-y-5 w-1/2">
+      <div className="flex flex-col md:flex-row justify-between items-center md:justify-center w-full max-w-4xl gap-5">
+        <div className="flex flex-col space-y-2 px-7">
           {/* <MyImageContainer
             // device="phone"
             classNames="flex"
@@ -36,10 +39,12 @@ export default function MyEvent() {
             href="https://www.google.com/search?q=los+canos+de+meca+spain&sca_esv=df75e0f1ec09a3b7&udm=2&biw=1337&bih=852&sxsrf=AHTn8zqw_Wnv-voCgrj0NWYj-SHWXAtdVw:1741281379520&ei=Y9jJZ_-zH_mA0PEP15-zIA&ved=0ahUKEwi_8dHQ-vWLAxV5ADQIHdfPDAQQ4dUDCBE&uact=5&oq=los+canos+de+meca+spain&gs_lp=EgNpbWciF2xvcyBjYW5vcyBkZSBtZWNhIHNwYWluMgcQIxgnGMkCMgYQABgFGB4yBhAAGAUYHkiHE1AAWIMScAB4AJABAJgBYKABgguqAQIxN7gBA8gBAPgBAZgCEKAC8ArCAgYQABgHGB7CAggQABgHGAoYHsICCBAAGAcYCBgewgIIEAAYBRgHGB7CAgUQABiABJgDAJIHBDE0LjKgB9tE&sclient=img"
             target="_blank"
           >
-            <MyHeader headerType={2}>Los Caños De Meca, Spain</MyHeader>
+            <MyHeader headerType={2} className="text-center">
+              Los Caños De Meca, Spain
+            </MyHeader>
           </a>
         </div>
-        <div className="flex flex-col items-center space-y-5 w-1/2">
+        <div className="flex flex-col items-center space-y-5 px-14">
           <div className="gap-10">
             <MyParagraph>
               I&rsquo;ve been talking about this trip forever, and now
