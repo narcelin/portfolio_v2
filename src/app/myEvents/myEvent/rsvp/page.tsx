@@ -14,6 +14,7 @@ export default function Rsvp() {
   const [usersEventID, setUsersEventID] = useState("30th Birthday");
   const [usersName, setUsersName] = useState("");
   const [usersEmail, setUsersEmail] = useState("");
+  const [usersCountryCode, setUsersCountryCode] = useState("");
   const [usersPhoneNumber, setUsersPhoneNumber] = useState("");
   const [userNotes, setUserNotes] = useState("");
 
@@ -66,6 +67,7 @@ export default function Rsvp() {
       event_id: usersEventID,
       name: usersName,
       email: usersEmail,
+      country_code: usersCountryCode,
       phone_number: usersPhoneNumber,
       notes: userNotes,
     });
@@ -98,7 +100,7 @@ export default function Rsvp() {
   return (
     <main className="flex flex-col items-center py-14 gap-10">
       <form
-        className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-2/3"
+        className="flex flex-col md:grid grid-cols-4 grid-rows-4 gap-x-14 gap-y-4 w-full"
         onSubmit={handleSubmit}
       >
         {/* Event Name */}
@@ -120,7 +122,7 @@ export default function Rsvp() {
               Name
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
+              className="text-black border text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="text"
               id="name"
               value={`${usersName}`}
@@ -132,21 +134,48 @@ export default function Rsvp() {
         </div>
         {/* Number Input */}
         <div className="col-span-2 row-start-2">
-          <div className="mb-6">
-            <label
-              className="text-heading block text-sm font-medium mb-2"
-              htmlFor="number"
+          <label
+            className="text-heading block text-sm font-medium mb-2"
+            htmlFor="phoneNumber"
+          >
+            Phone Number
+          </label>
+          <div className="flex gap-5 items-center mb-6">
+            <select
+              id="countryCode"
+              className="text-black dark:text-white border text-pText text-center text-sm rounded-lg block py-2.5"
+              value={usersCountryCode}
+              onChange={(e) => setUsersCountryCode(e.target.value)}
             >
-              Number
-            </label>
+              <option value="" disabled hidden>
+                Select
+              </option>
+              {/* USA */}
+              <option value="+1">🇺🇸 +1</option> {/* USA */}
+              <option value=" +1">🇨🇦 +1</option> {/* Canada */}
+              <option value="+34">🇪🇸 +34</option> {/* Spain */}
+              <option value="+44">🇬🇧 +44</option> {/* UK */}
+              <option value="+61">🇦🇺 +61</option> {/* Australia */}
+              <option value="+43">🇦🇹 +43</option> {/* Austria */}
+              <option value="+33">🇫🇷 +33</option> {/* France */}
+              <option value="+49">🇩🇪 +49</option> {/* Germany */}
+              <option value="+91">🇮🇳 +91</option> {/* India */}
+              <option value="+212">🇲🇦 +212</option> {/* Morocco */}
+              <option value="+351">🇵🇹 +351</option> {/* Portugal */}
+            </select>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
+              className="text-black border text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="tel"
               id="phoneNumber"
               value={`${usersPhoneNumber}`}
-              onChange={(e) => setUsersPhoneNumber(e.target.value)}
+              onChange={(e) => {
+                // Remove any non-numeric characters (e.g., spaces, dashes, parentheses)
+                const sanitizedValue = e.target.value.replace(/\D/g, "");
+                setUsersPhoneNumber(sanitizedValue);
+              }}
               required
-              placeholder="+1 (555) 555 5555"
+              onBlur={(e) => console.log("onBlur")}
+              placeholder="(555) 555 5555"
             />
           </div>
         </div>
@@ -160,7 +189,7 @@ export default function Rsvp() {
               Email
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
+              className="text-black border text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="email"
               id="email"
               value={`${usersEmail}`}
@@ -180,7 +209,7 @@ export default function Rsvp() {
               Notes
             </label>
             <input
-              className="text-black bg-c3 border border-c2 placeholder-c5 text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
+              className="text-black border text-pText text-sm rounded-lg w-full block p-2.5 dark:text-white"
               type="subject"
               id="subject"
               value={`${userNotes}`}
