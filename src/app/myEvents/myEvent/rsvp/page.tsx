@@ -146,6 +146,7 @@ export default function Rsvp() {
               className="text-black dark:text-white border text-pText text-center text-sm rounded-lg block py-2.5"
               value={usersCountryCode}
               onChange={(e) => setUsersCountryCode(e.target.value)}
+              required
             >
               <option value="" disabled hidden>
                 Select
