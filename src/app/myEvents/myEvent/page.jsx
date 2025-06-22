@@ -77,6 +77,44 @@ export default function MyEvent() {
           </MyButton>
         </div>
       </div>
+
+      {/* WhatsApp Community Join Section */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 border border-green-500 rounded-xl p-6 bg-white/5 shadow-lg max-w-2xl w-full">
+        <div className="flex flex-col items-center md:items-start">
+          <MyHeader
+            headerType={3}
+            className="text-green-600 mb-2 text-center md:text-left"
+          >
+            Join the WhatsApp Community
+          </MyHeader>
+          <MyParagraph className="mb-3 text-center md:text-left">
+            Stay up to date, chat with others, and get all the latest info about
+            the trip!
+            <br />
+            Scan the QR code or tap the link below to join.
+          </MyParagraph>
+          <a
+            href="https://chat.whatsapp.com/EARA2ZulEGi9mUvboOTd7V"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 underline font-semibold text-center md:text-left"
+          >
+            Join via link
+          </a>
+        </div>
+        <div className="flex justify-center items-center">
+          <Image
+            src="/assets/imgs/whatsAppQR.png"
+            alt="WhatsApp Group QR Code"
+            width={140}
+            height={140}
+            className="rounded-md border border-green-500 bg-white"
+          />
+        </div>
+      </div>
+      {/* End WhatsApp Community Join Section */}
+
+      <div></div>
     </main>
   );
 }
