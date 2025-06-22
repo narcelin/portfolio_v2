@@ -113,8 +113,8 @@ export default function MyEvent() {
         </div>
         <div className="flex justify-center items-center">
           <Image
-            // src="/assets/imgs/QRCode.jpg"
-            src="/assets/imgs/img1.jpg"
+            src="/assets/imgs/whatsappQR.jpeg"
+            // src="/assets/imgs/img1.jpg"
             alt="WhatsApp Group QR Code"
             width={140}
             height={140}

@@ -255,7 +255,7 @@ export default function Rsvp() {
             </h2>
             <br />
             <Image
-              src="/assets/imgs/QRCode.jpg"
+              src="/assets/imgs/whatsappQR.jpeg"
               alt="WhatsApp Group QR Code"
               width={140}
               height={140}
