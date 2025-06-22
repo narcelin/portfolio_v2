@@ -39,7 +39,7 @@ export default function MyEvent() {
             target="_blank"
           >
             <MyHeader headerType={2} className="text-center">
-              Los Caños De Meca, Spain
+              Southern Spain
             </MyHeader>
           </a>
         </div>
