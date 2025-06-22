@@ -26,7 +26,7 @@ export default function MySocials() {
         href="https://www.instagram.com/nicodotdev?igsh=MWl1d2Y5cDI3aGs2cw%3D%3D&utm_source=qr"
         target="_blank"
       >
-        <FaInstagram size={20} />
+        {/* <FaInstagram size={20} /> */}
       </a>
       {/* <FaTwitter size={20} /> */}
     </div>
